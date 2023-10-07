@@ -1,0 +1,3 @@
+/home/MKNDEA002/vio/build/CMakeFiles/Tutorial.dir
+/home/MKNDEA002/vio/build/CMakeFiles/edit_cache.dir
+/home/MKNDEA002/vio/build/CMakeFiles/rebuild_cache.dir
