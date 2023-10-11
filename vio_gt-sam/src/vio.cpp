@@ -23,6 +23,11 @@
 #include <gtsam/navigation/Scenario.h>
 #include <gtsam/nonlinear/ISAM2.h>
 #include <gtsam/slam/BetweenFactor.h>
+#include <gtsam/geometry/Pose3.h>
+#include <gtsam/geometry/Cal3_S2Stereo.h>
+#include <gtsam/nonlinear/Values.h>
+#include <gtsam/nonlinear/utilities.h>
+#include <gtsam/slam/StereoFactor.h>
 
 #include <vector>
 
@@ -134,6 +139,22 @@ int main(int argc, char* argv[]) {
       initialEstimate.insert(V(i), n_velocity);
       accum.resetIntegration();
     }
+   // Add landmarks  
+   // pixel coordinates uL, uR, v (same for left/right images due to
+   // rectification) landmark coordinates X, Y, Z in camera frame, resulting from
+   // triangulation
+   // read stereo measurement details from file and use to create and add
+   // GenericStereoFactor objects to the graph representation    
+
+    graph.emplace_shared<GenericStereoFactor<Pose3, Point3> >(
+        StereoPoint2(uL, uR, v), model, Symbol('x', x), Symbol('l', l), K);
+
+    // if the landmark variable included in this factor has not yet been added
+    // to the initial variable value estimate, add it
+    initial_estimate.insert(Symbol('l', l), worldPoint);
+
+    // Add initial Estimates of current poses
+    initial_estimate.insert(2, Pose3(Rot3(), Point3(0.1, -0.1, 1.1)));
 
     // Incremental solution
     isam.update(newgraph, initialEstimate);
