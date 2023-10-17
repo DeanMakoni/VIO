@@ -321,6 +321,25 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
   count++;
 }
 
+void imu_callback_function(const sensor_msgs::msg::Imu::SharePtr msg){
+ 
+ Vector3 measuredAcc (msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
+ Vector3 measuredOmega (msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z);
+
+ // Check on how to add the correct dt
+
+ preintegrated->integrateMeasurement(measuredAcc,measuredOmega, dt);
+
+}
+
+void sonar_callback_function(const sensor_msgs::msg::Range::SharedPtr msg){
+
+}
+
+void depth_callback_function(const sensor_msgs::msg::FluidPressure::SharedPtr msg){
+
+}
+
 int main(int argc, char **argv) {
 
   // Force flush of the stdout buffer.
