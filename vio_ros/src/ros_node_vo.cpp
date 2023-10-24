@@ -214,6 +214,15 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
   uint64_t nanoseconds = h.stamp.nanosec;
   uint64_t time_out = seconds * 1000 + floor(nanoseconds / 1000000);
 
+
+
+  // Detect and match features in the left and right images
+  matcher_ = boost::make_shared<aru::core::utilities::image::OrbFeatureMatcher>(
+             match_params, extractor_params);
+  aru::core::utilities::image::FeatureSPtrVectorSptr feature = 
+              matcher->ComputeStereoMatches(left_image,right_image);
+
+
   // Add StereoImage
   image_stereo_.first =
       aru::core::utilities::image::Image(time_out, left_image);
