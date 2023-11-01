@@ -70,6 +70,24 @@ protected:
   void depth_callback_function(const sensor msgs::msg::FluidPressure::SHaredPtr msg);
 
 private:
+
+
+   int pose_id = 0;
+  // Create iSAM2 object
+  std::unique_ptr<ISAM2> ISAM;
+
+  // Initialize factor graph and values estimates on nodes (continually updated by isam.update()) 
+  NonlinearFactorGraph graph;
+  Values newNodes;
+  Values optimizedNodes;       // current estimate of values
+  Pose3 prev_camera_pose;      // current estimate of previous pose
+   
+
+   // Noise models
+  noiseModel::Isotropic::shared_ptr prior_landmark_noise = noiseModel::Isotropic::Sigma(3, 0.1);
+  noiseModel::Diagonal::shared_ptr pose_noise = noiseModel::Diagonal::Sigmas((Vector(6) << Vector3::Constant(0.3),Vector3::Constant(0.1)).finished()); // 30cm std on x,y,z 0.1 rad on roll,pitch,yaw 
+  noiseModel::Isotropic::shared_ptr pose_landmark_noise = noiseModel::Isotropic::Sigma(3, 10.0); // one pixel in u and v
+
   // Shared pointer to Visual Odometry Class
   std::shared_ptr<aru::core::vo::VO> vo_;
 
@@ -216,12 +234,17 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
 
 
 
-  // Detect and match features in the left and right images
+  // Detect and match features in the left and right images and return an array of features
   matcher_ = boost::make_shared<aru::core::utilities::image::OrbFeatureMatcher>(
-             match_params, extractor_params);
+             vo_->matcher_params, extractor_params);
   aru::core::utilities::image::FeatureSPtrVectorSptr feature = 
               matcher->ComputeStereoMatches(left_image,right_image);
 
+  // Get the pixel coordinates of the right and left images. 
+  // the pixel cordinates are used to make SterioPoint2 for GenericSterionFactors
+  // Stereo Point measurement (u_l, u_r, v). v will be identical for left & right for rectified stereo pair
+   
+   std::pair<Eigen::MatrixXf, Eigen::MatrixXf> cordinates_ = vo_->ObtainStereoPoints(left_image,right_image);
 
   // Add StereoImage
   image_stereo_.first =
@@ -258,6 +281,21 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
       Eigen::Vector3f rpy;
       cv::cv2eigen(rvec, rpy);
       float rotation = rpy.norm();
+
+     // Get translation and rotation from the current pose
+
+     Eigein::Matrix3f rotation_matrix = pose->GetRotation();
+
+    // Add node value for current pose with initial estimate being previous pose
+    // count is the pose_id
+
+    TODO:// Check why is the example using prev_camera pose instead of the current pose
+    if (count == 0 || count == 1) {
+      prev_camera_pose = Pose3() * Pose3(T_cam_imu_mat);
+    } 
+    newNodes.insert(Symbol('x', count), Pose3(Rot3(&rotation_matrix), pose->GetTranslation());
+
+
       if (dist > min_distance_ || rotation > min_rotation_) {
         prev_timestamp = time_out;
         image_key_ = image_stereo_;
@@ -327,6 +365,8 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
   }
   // Update the previous image to the current image
   image_stereo_prev_ = image_stereo_;
+
+  // count is the pose_id
   count++;
 }
 
@@ -349,12 +389,56 @@ void depth_callback_function(const sensor_msgs::msg::FluidPressure::SharedPtr ms
 
 }
 
+// Transform feature from image_processor to landmark with 3D coordinates
+// Add landmark to ISAM2 graph if not already there (connect to current pose with a factor)
+// Add landmark to point cloud 
+void featureToLandmark(aru::core::utilities::image::FeatureSPtrVectorSptr feauture,std::pair<Eigen::MatrixXf, Eigen::MatrixXf> coordinates){
+
+ // Get feature coordinates
+
+ double uL =coordinates.first.row(num)(0);  // from example it is being multiplied by resolution, check why - resolution_x is image distortion intrinsics
+ double uR =coordinates.second.row(num)(0); // from example it is being multiplied by resolution check why? 
+ double v  =coordinates.first.row(num)(1);  // same for both left and right images if the stereo cameras are rectified
+ 
+ // Estimate feature location in camera frame
+  double d = uR-uL;
+  double x = uL;
+  double y = v;
+  double W = d/ distance from cam0 to cam1
+
+// Estimate feature location in camera frame
+  double X_camera = (x-cx)/W;
+  double Y_camera = (y-cy)/W;
+  double Z_camera =  f/W; 
+
+  Point3 camera_point = Point3(X_camera,Y_camera,Z_camera);
+
+  TODO:// If landmark is behind camera, don't add to isam2 graph/point cloud
+  
+
+  TODO: // Transform landmark coordinates to world frame 
+
+  TODO: //Add ISAM2 value for feature/landmark if it doesn't already exist
+
+  bool bool_new_landmark = !optimizedNodes..exists(Symbol('l', landmark_id));
+  if (bool_new_landmark) {
+     
+      // Landmark is from  Symbol landmark = Symbol('l', landmark_id);
+      newNodes.insert(landmark, world_point);
+    }
+    
+  // Add ISAM2 factor connecting this frame's pose to the landmark
+    graph.emplace_shared<
+      GenericStereoFactor<Pose3, Point3> >(StereoPoint2(uL, uR, v), 
+        pose_landmark_noise, Symbol('x', count), landmark, K);
+}
+
 int main(int argc, char **argv) {
 
   // Force flush of the stdout buffer.
   setvbuf(stdout, NULL, _IONBF, BUFSIZ);
 
-  // Initialize any global resources needed by the middleware and the client
+  // Initialize any global resources needed by the middleware and the clienti
   // library. This will also parse command line arguments one day (as of Beta 1
   // they are not used). You must call this before using any other part of the
   // ROS system. This should be called once per process.
