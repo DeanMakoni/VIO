@@ -316,23 +316,18 @@ stereo_approx_time_syncher_->registerCallback(
                   std::placeholders::_2));
  
   
-  //typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::CompressedImage, sensor_msgs::msg::CompressedImage> SyncPolicy;
- //message_filters::Synchronizer<SyncPolicy> sync(SyncPolicy(1), stereo_subsriber_right, stereo_topic_left); // Tolerance of 10 seconds for approximate time        synchronization
-  
-  //sync.registerCallback(std::bind(&ROSVO::callback_function, this,std::placeholders::_1,
-    //                                         std::placeholders::_2)));
    
-//  imu_subscriber = this->create_subscription<sensor_msgs::msg::Imu>(
-  //    imu_topic, 10,
- //     std::bind(&ROSVO::imu_callback_function, this, std::placeholders::_1));
+imu_subscriber = this->create_subscription<sensor_msgs::msg::Imu>(
+    imu_topic, 10,
+      std::bind(&ROSVO::imu_callback_function, this, std::placeholders::_1));
+      
+sonar_subscriber = this->create_subscription<sensor_msgs::msg::Range>(
+     sonar_topic, 10, 
+      std::bind(&ROSVO::sonar_callback_function, this, std::placeholders::_1));
 
-//  sonar_subscriber = this->create_subscription<sensor_msgs::msg::Range>(
- //     sonar_topic, 10, 
-//      std::bind(&ROSVO::sonar_callback_function, this, std::placeholders::_1));
-
-  //depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
-  //    depth_topic, 10,
-   //   std::bind(&ROSVO::depth_callback_function, this, std::placeholders::_1));
+depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
+    depth_topic, 10,
+     std::bind(&ROSVO::depth_callback_function, this, std::placeholders::_1));
   RCLCPP_INFO(get_logger(), "Dean 2");
 
   // Initialise VO params
