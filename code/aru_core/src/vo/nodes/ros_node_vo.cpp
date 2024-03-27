@@ -103,16 +103,19 @@ using gtsam::symbol_shorthand::P;  // Pressure bias
 class ROSVO : public rclcpp::Node {
 
 public:
-  explicit ROSVO(const rclcpp::NodeOptions &options);
+explicit ROSVO(const rclcpp::NodeOptions &options);
 
-  virtual ~ROSVO();
+virtual ~ROSVO();
 std::shared_ptr<gtsam::PreintegrationType> preintegrated;
-int pose_id = 0;
+
 int pressure_bias =0; //barometric bias that will be constrained
 int pressure_count = 0;
 imuBias::ConstantBias prior_imu_bias;
 imuBias::ConstantBias prev_bias;
 std::shared_ptr<message_filters::TimeSynchronizer<sensor_msgs::msg::CompressedImage, sensor_msgs::msg::CompressedImage>> sync;
+
+// Thread Management
+mutable std::mutex graph_mutex;
 
 // Create iSAM2 object
 //std::unique_ptr<ISAM2> ISAM;
@@ -141,6 +144,55 @@ int  landmark_id;  // landmark ID represents the index in the FeatureSPtrVectorS
 
  
 protected:
+
+/**
+  *Optimise using ISAM2 and publish
+  *
+  */
+  void Optimise_and_publish();
+  
+ /**
+   * @brief Structure to hold information about a named key. Named keys are used to keep track of the index for which
+   * data should be added to the graph.
+   *
+   */
+  struct NamedKeyInfo {
+      NamedKeyInfo(const int key = 0, const unsigned int priority = 0) : key(key), priority(priority) {}
+
+      // Key/index used to acquire gtsam::Key in graph
+        int key;
+
+      // Priority of the named key, used in various operations. 0 is maximum priority.
+      unsigned int priority;
+    };
+  
+  // associative container to store keys
+  std::map<std::string, NamedKeyInfo> keys;
+  
+  // Graph and key management functions
+  
+  /**
+   * @brief Increment a named key.
+   *
+   * @param name
+   */
+  void increment(const std::string& name);
+
+  /**
+  * @brief Get the key value for a named key.
+  *
+  * @param name
+  * @return int
+   */
+  int key(const std::string& name, const int offset = 0) const;
+
+  /**
+  * @brief Return the smallest key value of the named keys with priority <= priority arg (highest = 0).
+  *
+  * @return int maximum priority of named keys used in the evaluation of the minimum key.
+  */
+  int minimum_key(const unsigned int priority = std::numeric_limits<unsigned int>::max()) const;
+    
   bool startCamera();
   void featureToLandmark(const cv::Mat &image_lef, const cv::Mat &image_right); //,std::pair<Eigen::MatrixXf, Eigen::MatrixXf> coordinates);
   void publishImage(cv::Mat &img, image_transport::CameraPublisher &pubImg,
@@ -437,6 +489,10 @@ void ROSVO::test_callback_function(const sensor_msgs::msg::CompressedImage::Shar
 }
 
 void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstSharedPtr &msg_right, const sensor_msgs::msg::CompressedImage::ConstSharedPtr &msg_left) {
+
+  // lock the thread
+  graph_mutex.lock();
+  
   RCLCPP_INFO(get_logger(), "Filtered Stereo Topic Received");
   // Get images from msg
   cv::Mat left_image = cv::imdecode(cv::Mat(msg_right->data), cv::IMREAD_COLOR);
@@ -691,9 +747,12 @@ void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstShar
 
   // count is the pose_id
   count++;
+  graph_mutex.unlock();
 }
 
 void ROSVO::imu_callback_function(const sensor_msgs::msg::Imu::SharedPtr msg){
+// Lock the thread
+ graph_mutex.lock();
  
  RCLCPP_INFO(get_logger(), "IMU topic received");
  Vector3 measuredAcc (msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
@@ -714,6 +773,9 @@ void ROSVO::imu_callback_function(const sensor_msgs::msg::Imu::SharedPtr msg){
  
  RCLCPP_INFO(get_logger(), "Imu callback done");
  
+ // unlock the thread 
+ graph_mutex.unlock();
+ 
 }
 
 void ROSVO::sonar_callback_function(const sensor_msgs::msg::Range::SharedPtr msg){
@@ -721,124 +783,109 @@ void ROSVO::sonar_callback_function(const sensor_msgs::msg::Range::SharedPtr msg
 }
 
 void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::SharedPtr msg){
-     
  
+ // Lock the thread  
+ graph_mutex.lock();
  
-     
-   //gtsam::Rot3 prior_rotation = gtsam::Rot3::Quaternion(1, 1,1,1);
-   //Point3 prior_point;
-  // gtsam::Pose3 prior_pose(gtsam::Rot3::Quaternion(1, 18,16,1), Point3(10, 8,23));
-  // Vector3 prior_velocity (1,2,10);
+ // get latest barometer key
+ int next_barometer_key = this.key("barometer");
+ 
+ // increment barometer key
+ this.increment("barometer");
 
-  // gtsam::NavState prev_state(prior_pose, prior_velocity);
-    //gtsam::NavState prop_state = prev_state;
-
-    // Conver Imu message  to gtsam::Pose3
-    // Extract orientation quaternion from IMU message
-   // Eigen::Quaterniond orientation(msg->orientation.w, msg->orientation.x, msg->orientation.y, msg->orientation.z);
-
-    // Convert orientation quaternion to rotation matrix
-    //Eigen::Matrix3d rotationMatrix = orientation.toRotationMatrix();
-   // Rot3 rot3(rotationMatrix);
-    // Extract translation if available (assuming it's in the IMU message)
- //   double x_translation = msg->linear_acceleration.x;
-  //  double y_translation = msg->linear_acceleration.y;
-   // double z_translation = msg->linear_acceleration.z;
-
-    // Create Pose3 object
-    // use it as prior pose
-   // Pose3 gtsam_pose(rot3, Point3(x_translation, y_translation, z_translation));
-
-    if (pose_id == 0){
-       
-       
-     // Prior pressure noise model TODO: change valye accordingly
-     //double sigma = 0.1; // Adjust this value as needed
-     //gtsam::Matrix1 covariance = gtsam::Matrix::Identity(1,1) * sigma*sigma;
-     // Create the Gaussian noise model
-     //auto prior_pressure_noise_model = gtsam::noiseModel::Gaussian::Covariance(covariance);
+ int next_pose_key = this.key("pose");
+ this.increment("pose");
+ if (next_pose_key == 0){
        
        prior_pose = Pose3(gtsam::Rot3::Ypr(0, 0,0), Point3(0, 0,0));
        prior_velocity = Vector3(0,0,0);
        //prior_pressure = 1; //change this vlue accordingly
        // add prior factors for stereo cameras and IMU
-       newNodes.insert(X(pose_id), prior_pose);
-       newNodes.insert(V(pose_id), prior_velocity);
+       newNodes.insert(next_pose_key, prior_pose);
+       newNodes.insert(next_pose_key, prior_velocity);
       // newNodes.insert(P(pose_id), prior_pressure);
        //newNodes.insert(B(pose_id), prior_imu_bias);
-       newNodes.insert(biasKey, imuBias::ConstantBias());
+       newNodes.insert(this.key("pose"), imuBias::ConstantBias());
 
-       graph->addPrior(X(pose_id), prior_pose, pose_noise); 
+       graph->addPrior(next_pose_key, prior_pose, pose_noise); 
        //graph->addPrior(P(pose_id), prior_pressure,prior_pressure_noise_model);
-       graph->addPrior(V(pose_id), prior_velocity, velocity_noise_model);
+       graph->addPrior(next_pose_key, prior_velocity, velocity_noise_model);
        //graph->addPrior(B(pose_id), prior_imu_bias, bias_noise_model);
-       graph->addPrior(biasKey,imuBias::ConstantBias() , bias_noise_model);
-       pose_id = pose_id + 1;
-       biasKey++;
+       graph->addPrior(this.key("pose"),imuBias::ConstantBias() , bias_noise_model);
+       //pose_id = pose_id + 1;
+      // biasKey++;
        RCLCPP_INFO(get_logger(), "Pose_ID zero");
-      }
-        //TODO: //  Create a Navstate to store pose, velocity and bias
-    // add  values to  be optimized
-    //Navstate prev_state(prior_pose, prior_velocity);
-    else{
-    //gtsam::NavState  prev_state = NavState(result.at<Pose3>(X(pose_id,
-     //                       result.at<Vector3>(V(pose_id - 1)));
-    
-
-     // add IMU and Bias factors to graph
+  }
+     
+ else{
+   
+        // add IMU and Bias factors to graph
      auto preint_imu =
          dynamic_cast<const PreintegratedImuMeasurements&>(*preintegrated);
       //auto preint_imu = std::make_unique<gtsam::PreintegratedImuMeasurements>(
        //                  CastToPreintergratedImuMeasurements(*preintegrated);
                          
-      ImuFactor imu_factor(X(pose_id - 1 ), V(pose_id -1),
-                           X(pose_id), V(pose_id),
-                           biasKey -1, preint_imu);
+      ImuFactor imu_factor(this.key("pose", -1), this.key("pose", -1)),
+                           this.key("pose"), this.key("pose"),
+                           this.key("pose", -1), preint_imu);
+                           
       graph->add(imu_factor);
       RCLCPP_INFO(get_logger(), "IMU factor added");
       imuBias::ConstantBias zero_bias(Vector3(0, 0, 0), Vector3(0, 0, 0));
       graph->add(BetweenFactor<imuBias::ConstantBias>(
-         biasKey-1, biasKey, imuBias::ConstantBias(),
-        bias_noise_model));
+         this.key("pose", -1), biasKey, imuBias::ConstantBias(),
+         bias_noise_model));
        RCLCPP_INFO(get_logger(), "Bias factor added");
        
       gtsam::NavState  prev_state = NavState(prior_pose,
                           prior_velocity); 
       gtsam::NavState prop_state = preintegrated->predict(prev_state, imuBias::ConstantBias());
-      newNodes.insert(X(pose_id), prop_state.pose());
-      newNodes.insert(V(pose_id), prop_state.v());
-      newNodes.insert(biasKey, imuBias::ConstantBias());
+      newNodes.insert(this.key("pose"), prop_state.pose());
+      newNodes.insert(this.key("pose"), prop_state.v());
+      newNodes.insert(this.key("pose"), imuBias::ConstantBias());
       
       // create Brometric factor and add it to the graph
-     // Define the noise variance (sigma^2)
      
      double sigma = 0.1; // Adjust this value as needed
 
      // Create a 1x1 covariance matrix
      gtsam::Matrix1 covariance = gtsam::Matrix::Identity(1,1) * msg->variance;
 
-    // Create the Gaussian noise model
-     //auto pressure_noise_model = gtsam::noiseModel::Gaussian::Covariance(covariance);
-     //auto pressure_noise_model = gtsam::noiseModel::Diagonal(gtsam::Vector1(msg->variance);
-     SharedNoiseModel pressure_noise_model = noiseModel::Isotropic::Sigma(1, 0.25);
-     // Noise model for barometer/pressure TODO: Chnge this to use suitale values
-     // noiseModel::Gaussian::shared_ptr pressure_noise_model = noiseModel::Gaussian::Sigma(6, 1e-3);
-  
+     // Create the Gaussian noise model
+     SharedNoiseModel pressure_noise_model = gtsam::noiseModel::Isotropic::Variance(1, msg->variance));;
+     
      // sensor message's pressure is in pascals, convert it o KPa for gtsam
      const double pressure = (msg->fluid_pressure/ 1000);
        
      RCLCPP_INFO(get_logger(), "Barometer topic Received");
      // create barometric factor
-     BarometricFactor pressure_factor(X(pose_id),
-                                     P(pose_id),pressure,
+     BarometricFactor pressure_factor(this.key("pose"),
+                                      this.key("barometer"),pressure,
                                      pressure_noise_model);
     graph->add(pressure_factor);
+    
+    //TODO: For first barometer key, create prior (on the current state)
+     if (next_barometer_key == 0) {
+     
+     
+     }
+    //TODO: Create barometer bias factors up to the current key
+    
+    
     //gtsam::Pose3 pressure_pose = Pose3(gtsam::Rot3::RzRyRx(0, 0,0), Point3(0, 0,1000));
-    newNodes.insert(P(pose_id), pressure);
-    double pressurebias = 0;
-    //newNodes.insert(Symbol('B_P',pressure_bias),  pressurebias);
-       
-       
+     newNodes.insert(this.key("pose")), pressure);
+     double pressurebias = 0;
+     
+     // Optimise and publish
+      this.Optimise_and_publish();
+      
+       }
+  // unlock the thread
+  graph_mutex.unlock();
+}
+
+void ROVO::Optimise_and_publish() {
+   
        // ISAM2 solver
        RCLCPP_INFO(get_logger(), "ISAM solver");
        //Values Testnode;
@@ -848,9 +895,9 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
        std::cout << p << std::endl;
        p = p+1;
        result = ISAM->calculateEstimate();
-       prior_pose = result.at<Pose3>(X(pose_id ));
+       prior_pose = result.at<Pose3>(this.key("pose"));
 
-       prior_velocity = result.at<Vector3>(V(pose_id ));
+       prior_velocity = result.at<Vector3>(this.key("pose"));
        
        
        RCLCPP_INFO(get_logger(), "Calculation done");
@@ -868,12 +915,13 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
        preintegrated->resetIntegrationAndSetBias(imuBias::ConstantBias());
        // publish poses
 
-       gtsam::Pose3 current_pose = result.at<Pose3>(X(pose_id));
+       gtsam::Pose3 current_pose = result.at<Pose3>(this.key("pose"));
        RCLCPP_INFO(get_logger(), "Pose  Id correct");
        // Extract position
        gtsam::Vector3 position = current_pose.translation();
        // Extract quaternion
        gtsam::Rot3 rotation = current_pose.rotation();
+
        gtsam::Quaternion quaternion = rotation.toQuaternion();
 
        // msg for pose_publisher
@@ -891,15 +939,7 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
        pose_msg.orientation.z = quaternion.z();
 
        pose_publisher_->publish(pose_msg);
-      
-       pose_id = pose_id + 1;
-       biasKey++;
-        // see how to add  barometric bias to graph and values
-      pressure_bias = pressure_bias + 1;
-      pressure_count = pressure_count + 1;
-       }
-
-}
+  }    
 
 // Transform feature from image_processor to landmark with 3D coordinates
 // Add landmark to ISAM2 graph if not already there (connect to current pose with a factor)
@@ -983,7 +1023,7 @@ for (auto feat : *features) {
 
     graph->emplace_shared<
       GenericStereoFactor<Pose3, Point3> >(StereoPoint2(uL, uR, v), 
-        pose_landmark_noise, X(pose_id), landmark, K);
+        pose_landmark_noise, this.key("pose"), landmark, K);
    landmark_id++;
     
   }
@@ -1054,7 +1094,7 @@ if ( start == false){
 
 	    graph->emplace_shared<
 	      GenericStereoFactor<Pose3, Point3> >(StereoPoint2(uL, uR, v), 
-		pose_landmark_noise, X(pose_id), landmark, K);
+		pose_landmark_noise, this.key("pose"), landmark, K);
 	    index++;
 	    
 	  }
@@ -1063,6 +1103,28 @@ if ( start == false){
 
 }
 
+void ROSVO::increment(const std::string& key_) {
+    ++keys.at(key_).key;
+}
+
+int ROSVO::key(const std::string& key_, const int offset) const {
+    return keys.at(key_).key + offset;
+}
+
+int ROSVO::minimum_key(const unsigned int priority_) const {
+    bool minimum_key_found{false};
+    int minimum_key_ = std::numeric_limits<int>::max();
+    for (const auto& [name, key_info] : keys) {
+        if (key_info.priority <= priority_) {
+            minimum_key_ = std::min(minimum_key_, key_info.key);
+            minimum_key_found = true;
+        }
+    }
+    if (!minimum_key_found) {
+        throw std::runtime_error("No named keys with requested priority <= " + std::to_string(priority_) + " exist.");
+    }
+    return minimum_key_;
+}
 
 int main(int argc, char **argv) {
 
