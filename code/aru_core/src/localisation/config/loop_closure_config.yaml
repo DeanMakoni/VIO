@@ -1,0 +1,92 @@
+%YAML:1.0
+
+Regulariser:
+  TV:
+    0
+  TGV:
+    1
+  LOG_TV:
+    0
+  LOG_TGV:
+    0
+  sigma:
+    125.0
+  tau:
+    0.001
+  lambda:
+    0.75
+  theta:
+    1.0
+  alpha_1:
+    1.0
+  alpha_2:
+    1.0
+  beta:
+    0.1
+  iterations:
+    500
+  outer_iterations:
+    5
+
+Viewer:
+  max_depth:
+    10
+  colour_scale:
+    1.5
+
+Camera:
+  height:
+    720
+  width:
+    1280
+  baseline:
+    0.12
+  CameraMatrix: !!opencv-matrix
+    rows: 3
+    cols: 3
+    dt: f
+    data: [531.14774, 0., 637.87114, 
+           0., 531.26312, 331.27469,
+           0., 0., 1. ]
+
+FeatureExtractor:
+  num_features:
+    4000
+  num_levels:
+    4
+  scale_factor:
+    0.5
+  initial_fast_threshold:
+    20
+  minimum_fast_threshold:
+    7
+  patch_size:
+    31
+  half_patch_size:
+    15
+  edge_threshold:
+    19
+FeatureMatcher:
+  match_threshold_high:
+    100
+  match_threshold_low:
+    50
+  stereo_baseline:
+    0.12
+  focal_length:
+    531.14774
+
+FeatureSolver:
+  ransac_prob:
+    0.95
+  ransac_max_iterations:
+    1000
+  inlier_threshold:
+    3.0
+  CameraMatrix: !!opencv-matrix
+    rows: 3
+    cols: 3
+    dt: f
+    data: [ 531.14774, 0., 637.87114, 
+           0., 531.26312, 331.27469,
+           0., 0., 1. ]

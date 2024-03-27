@@ -1,0 +1,1174 @@
+The system is: Linux - 5.15.133.1-microsoft-standard-WSL2 - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/3.22.1/CompilerIdCXX/a.out"
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b9264/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b9264.dir/build.make CMakeFiles/cmTC_b9264.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++   -v -o CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9264.dir/'
+ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b9264.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccCJjKeA.s
+GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include/c++/11
+ /usr/include/x86_64-linux-gnu/c++/11
+ /usr/include/c++/11/backward
+ /usr/lib/gcc/x86_64-linux-gnu/11/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9264.dir/'
+ as -v --64 -o CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccCJjKeA.s
+GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_b9264
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9264.dir/link.txt --verbose=1
+/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b9264 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b9264' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b9264.'
+ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPh0V2s.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b9264 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b9264' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b9264.'
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/include/c++/11]
+    add: [/usr/include/x86_64-linux-gnu/c++/11]
+    add: [/usr/include/c++/11/backward]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
+  collapse include dir [/usr/include/x86_64-linux-gnu/c++/11] ==> [/usr/include/x86_64-linux-gnu/c++/11]
+  collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/11;/usr/include/x86_64-linux-gnu/c++/11;/usr/include/c++/11/backward;/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b9264/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b9264.dir/build.make CMakeFiles/cmTC_b9264.dir/build]
+  ignore line: [gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9264.dir/']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_b9264.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccCJjKeA.s]
+  ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/include/c++/11]
+  ignore line: [ /usr/include/x86_64-linux-gnu/c++/11]
+  ignore line: [ /usr/include/c++/11/backward]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9264.dir/']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccCJjKeA.s]
+  ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_b9264]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9264.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b9264 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b9264' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_b9264.']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPh0V2s.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b9264 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccPh0V2s.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b9264] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
+    arg [CMakeFiles/cmTC_b9264.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+  collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+  collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+  collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+Determining the gflags namespace passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5777f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5777f.dir/build.make CMakeFiles/cmTC_5777f.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5777f.dir/DetermineGflagsNamespace.cxx.o
+/usr/bin/c++ -DGFLAGS_IS_A_DLL=0 -DGLOG_GFLAGS_NAMESPACE=gflags   -o CMakeFiles/cmTC_5777f.dir/DetermineGflagsNamespace.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/DetermineGflagsNamespace.cxx
+Linking CXX executable cmTC_5777f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5777f.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_5777f.dir/DetermineGflagsNamespace.cxx.o -o cmTC_5777f  /usr/lib/x86_64-linux-gnu/libgflags.so.2.2.2 -lpthread 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7e243/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7e243.dir/build.make CMakeFiles/cmTC_7e243.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7e243.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_7e243.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_7e243
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e243.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_7e243.dir/CheckIncludeFile.cxx.o -o cmTC_7e243 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9c2dc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9c2dc.dir/build.make CMakeFiles/cmTC_9c2dc.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9c2dc.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9c2dc.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9c2dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c2dc.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_9c2dc.dir/src.cxx.o -o cmTC_9c2dc 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c5ac4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c5ac4.dir/build.make CMakeFiles/cmTC_c5ac4.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c5ac4.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_c5ac4.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_c5ac4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5ac4.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_c5ac4.dir/CheckIncludeFile.cxx.o -o cmTC_c5ac4 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file execinfo.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4bc07/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4bc07.dir/build.make CMakeFiles/cmTC_4bc07.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4bc07.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_4bc07.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_4bc07
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bc07.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_4bc07.dir/CheckIncludeFile.cxx.o -o cmTC_4bc07 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file glob.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_41c27/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_41c27.dir/build.make CMakeFiles/cmTC_41c27.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_41c27.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_41c27.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_41c27
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41c27.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_41c27.dir/CheckIncludeFile.cxx.o -o cmTC_41c27 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_79898/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_79898.dir/build.make CMakeFiles/cmTC_79898.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_79898.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_79898.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_79898
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79898.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_79898.dir/CheckIncludeFile.cxx.o -o cmTC_79898 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ec827/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ec827.dir/build.make CMakeFiles/cmTC_ec827.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ec827.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_ec827.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ec827
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec827.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ec827.dir/CheckIncludeFile.cxx.o -o cmTC_ec827 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file pwd.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6f0ca/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6f0ca.dir/build.make CMakeFiles/cmTC_6f0ca.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6f0ca.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_6f0ca.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_6f0ca
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f0ca.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_6f0ca.dir/CheckIncludeFile.cxx.o -o cmTC_6f0ca 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_77a4e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_77a4e.dir/build.make CMakeFiles/cmTC_77a4e.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_77a4e.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_77a4e.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_77a4e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77a4e.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_77a4e.dir/CheckIncludeFile.cxx.o -o cmTC_77a4e 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ac109/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ac109.dir/build.make CMakeFiles/cmTC_ac109.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ac109.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_ac109.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ac109
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac109.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ac109.dir/CheckIncludeFile.cxx.o -o cmTC_ac109 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fb649/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fb649.dir/build.make CMakeFiles/cmTC_fb649.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fb649.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_fb649.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_fb649
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb649.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_fb649.dir/CheckIncludeFile.cxx.o -o cmTC_fb649 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/syscall.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e289a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e289a.dir/build.make CMakeFiles/cmTC_e289a.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e289a.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_e289a.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_e289a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e289a.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_e289a.dir/CheckIncludeFile.cxx.o -o cmTC_e289a 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_379db/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_379db.dir/build.make CMakeFiles/cmTC_379db.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_379db.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_379db.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_379db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_379db.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_379db.dir/CheckIncludeFile.cxx.o -o cmTC_379db 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_41b2d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_41b2d.dir/build.make CMakeFiles/cmTC_41b2d.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_41b2d.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_41b2d.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_41b2d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41b2d.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_41b2d.dir/CheckIncludeFile.cxx.o -o cmTC_41b2d 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/utsname.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_099f5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_099f5.dir/build.make CMakeFiles/cmTC_099f5.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_099f5.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_099f5.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_099f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_099f5.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_099f5.dir/CheckIncludeFile.cxx.o -o cmTC_099f5 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file sys/wait.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_87043/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_87043.dir/build.make CMakeFiles/cmTC_87043.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_87043.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_87043.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_87043
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87043.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_87043.dir/CheckIncludeFile.cxx.o -o cmTC_87043 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file syscall.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ffe3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ffe3.dir/build.make CMakeFiles/cmTC_5ffe3.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ffe3.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_5ffe3.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_5ffe3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ffe3.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_5ffe3.dir/CheckIncludeFile.cxx.o -o cmTC_5ffe3 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file syslog.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1388b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1388b.dir/build.make CMakeFiles/cmTC_1388b.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1388b.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_1388b.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_1388b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1388b.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_1388b.dir/CheckIncludeFile.cxx.o -o cmTC_1388b 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file ucontext.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e2874/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e2874.dir/build.make CMakeFiles/cmTC_e2874.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e2874.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_e2874.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_e2874
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2874.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_e2874.dir/CheckIncludeFile.cxx.o -o cmTC_e2874 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0f111/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0f111.dir/build.make CMakeFiles/cmTC_0f111.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0f111.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_0f111.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_0f111
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f111.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_0f111.dir/CheckIncludeFile.cxx.o -o cmTC_0f111 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file ext/hash_map exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ed7fc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ed7fc.dir/build.make CMakeFiles/cmTC_ed7fc.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ed7fc.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_ed7fc.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/11/ext/hash_map:60,
+                 from /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/11/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+   32 | #warning \
+      |  ^~~~~~~
+Linking CXX executable cmTC_ed7fc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed7fc.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ed7fc.dir/CheckIncludeFile.cxx.o -o cmTC_ed7fc 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file ext/hash_set exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a8b1b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a8b1b.dir/build.make CMakeFiles/cmTC_a8b1b.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a8b1b.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_a8b1b.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/11/ext/hash_set:60,
+                 from /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/11/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+   32 | #warning \
+      |  ^~~~~~~
+Linking CXX executable cmTC_a8b1b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8b1b.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_a8b1b.dir/CheckIncludeFile.cxx.o -o cmTC_a8b1b 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file ext/slist exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_aca05/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aca05.dir/build.make CMakeFiles/cmTC_aca05.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aca05.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_aca05.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_aca05
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aca05.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_aca05.dir/CheckIncludeFile.cxx.o -o cmTC_aca05 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file tr1/unordered_map exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1e877/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1e877.dir/build.make CMakeFiles/cmTC_1e877.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1e877.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_1e877.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_1e877
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e877.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_1e877.dir/CheckIncludeFile.cxx.o -o cmTC_1e877 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file tr1/unordered_set exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_96509/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_96509.dir/build.make CMakeFiles/cmTC_96509.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_96509.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_96509.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_96509
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96509.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_96509.dir/CheckIncludeFile.cxx.o -o cmTC_96509 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file unordered_map exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b184c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b184c.dir/build.make CMakeFiles/cmTC_b184c.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b184c.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_b184c.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_b184c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b184c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_b184c.dir/CheckIncludeFile.cxx.o -o cmTC_b184c 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file unordered_set exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5b94c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5b94c.dir/build.make CMakeFiles/cmTC_5b94c.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5b94c.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_5b94c.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_5b94c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b94c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_5b94c.dir/CheckIncludeFile.cxx.o -o cmTC_5b94c 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a7508/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a7508.dir/build.make CMakeFiles/cmTC_a7508.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a7508.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_a7508.dir/CheckIncludeFile.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_a7508
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7508.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_a7508.dir/CheckIncludeFile.cxx.o -o cmTC_a7508 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of u_int16_t passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c5f84/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c5f84.dir/build.make CMakeFiles/cmTC_c5f84.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c5f84.dir/HAVE_U_INT16_T.cpp.o
+/usr/bin/c++    -o CMakeFiles/cmTC_c5f84.dir/HAVE_U_INT16_T.cpp.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckTypeSize/HAVE_U_INT16_T.cpp
+Linking CXX executable cmTC_c5f84
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5f84.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_c5f84.dir/HAVE_U_INT16_T.cpp.o -o cmTC_c5f84 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_357d0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_357d0.dir/build.make CMakeFiles/cmTC_357d0.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_357d0.dir/HAVE_UINT16_T.cpp.o
+/usr/bin/c++    -o CMakeFiles/cmTC_357d0.dir/HAVE_UINT16_T.cpp.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckTypeSize/HAVE_UINT16_T.cpp
+Linking CXX executable cmTC_357d0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_357d0.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_357d0.dir/HAVE_UINT16_T.cpp.o -o cmTC_357d0 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function dladdr exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ae2f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9ae2f.dir/build.make CMakeFiles/cmTC_9ae2f.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9ae2f.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=dladdr -o CMakeFiles/cmTC_9ae2f.dir/CheckFunctionExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_9ae2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ae2f.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=dladdr -rdynamic CMakeFiles/cmTC_9ae2f.dir/CheckFunctionExists.cxx.o -o cmTC_9ae2f 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function fcntl exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_71e0f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_71e0f.dir/build.make CMakeFiles/cmTC_71e0f.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_71e0f.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=fcntl -o CMakeFiles/cmTC_71e0f.dir/CheckFunctionExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_71e0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71e0f.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=fcntl -rdynamic CMakeFiles/cmTC_71e0f.dir/CheckFunctionExists.cxx.o -o cmTC_71e0f 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pread exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_84575/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_84575.dir/build.make CMakeFiles/cmTC_84575.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_84575.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pread -o CMakeFiles/cmTC_84575.dir/CheckFunctionExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_84575
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84575.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pread -rdynamic CMakeFiles/cmTC_84575.dir/CheckFunctionExists.cxx.o -o cmTC_84575 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function pwrite exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_30b0d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_30b0d.dir/build.make CMakeFiles/cmTC_30b0d.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_30b0d.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pwrite -o CMakeFiles/cmTC_30b0d.dir/CheckFunctionExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_30b0d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30b0d.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pwrite -rdynamic CMakeFiles/cmTC_30b0d.dir/CheckFunctionExists.cxx.o -o cmTC_30b0d 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_321ce/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_321ce.dir/build.make CMakeFiles/cmTC_321ce.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_321ce.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=sigaction -o CMakeFiles/cmTC_321ce.dir/CheckFunctionExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_321ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_321ce.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=sigaction -rdynamic CMakeFiles/cmTC_321ce.dir/CheckFunctionExists.cxx.o -o cmTC_321ce 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function sigaltstack exists passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fe845/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fe845.dir/build.make CMakeFiles/cmTC_fe845.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fe845.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=sigaltstack -o CMakeFiles/cmTC_fe845.dir/CheckFunctionExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CheckFunctionExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_fe845
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe845.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=sigaltstack -rdynamic CMakeFiles/cmTC_fe845.dir/CheckFunctionExists.cxx.o -o cmTC_fe845 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test HAVE_NO_DEPRECATED succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b9305/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b9305.dir/build.make CMakeFiles/cmTC_b9305.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b9305.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_NO_DEPRECATED  -Wdeprecated -o CMakeFiles/cmTC_b9305.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b9305
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9305.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_b9305.dir/src.cxx.o -o cmTC_b9305 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Determining if the snprintf exist passed with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8c380/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8c380.dir/build.make CMakeFiles/cmTC_8c380.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8c380.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_8c380.dir/CheckSymbolExists.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_8c380
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c380.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_8c380.dir/CheckSymbolExists.cxx.o -o cmTC_8c380 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+File /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <cstdio>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__ succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_29f3a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_29f3a.dir/build.make CMakeFiles/cmTC_29f3a.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29f3a.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___ATTRIBUTE__   -o CMakeFiles/cmTC_29f3a.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29f3a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29f3a.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_29f3a.dir/src.cxx.o -o cmTC_29f3a 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((unused));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_DEFAULT succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2ad1e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2ad1e.dir/build.make CMakeFiles/cmTC_2ad1e.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2ad1e.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___ATTRIBUTE__VISIBILITY_DEFAULT   -o CMakeFiles/cmTC_2ad1e.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx:3:61: warning: ‘visibility’ attribute ignored [-Wattributes]
+    3 | static void foo(void) __attribute__ ((visibility("default")));
+      |                                                             ^
+Linking CXX executable cmTC_2ad1e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ad1e.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_2ad1e.dir/src.cxx.o -o cmTC_2ad1e 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((visibility("default")));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_HIDDEN succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_297dd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_297dd.dir/build.make CMakeFiles/cmTC_297dd.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_297dd.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___ATTRIBUTE__VISIBILITY_HIDDEN   -o CMakeFiles/cmTC_297dd.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx:3:60: warning: ‘visibility’ attribute ignored [-Wattributes]
+    3 | static void foo(void) __attribute__ ((visibility("hidden")));
+      |                                                            ^
+Linking CXX executable cmTC_297dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_297dd.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_297dd.dir/src.cxx.o -o cmTC_297dd 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((visibility("hidden")));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___BUILTIN_EXPECT succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_29c39/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_29c39.dir/build.make CMakeFiles/cmTC_29c39.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29c39.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___BUILTIN_EXPECT   -o CMakeFiles/cmTC_29c39.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29c39
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29c39.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_29c39.dir/src.cxx.o -o cmTC_29c39 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+int main(void) { if (__builtin_expect(0, 0)) return 1; return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___SYNC_VAL_COMPARE_AND_SWAP succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2f3f5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2f3f5.dir/build.make CMakeFiles/cmTC_2f3f5.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2f3f5.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___SYNC_VAL_COMPARE_AND_SWAP   -o CMakeFiles/cmTC_2f3f5.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_2f3f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f3f5.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_2f3f5.dir/src.cxx.o -o cmTC_2f3f5 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+int main(void)
+{
+  int a; if (__sync_val_compare_and_swap(&a, 0, 1)) return 1; return 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_RWLOCK succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3a771/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3a771.dir/build.make CMakeFiles/cmTC_3a771.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a771.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_RWLOCK   -o CMakeFiles/cmTC_3a771.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3a771
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a771.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_3a771.dir/src.cxx.o -o cmTC_3a771 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#define _XOPEN_SOURCE 500
+#include <pthread.h>
+int main(void)
+{
+  pthread_rwlock_t l;
+  pthread_rwlock_init(&l, NULL);
+  pthread_rwlock_rdlock(&l);
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test STL_STD_NAMESPACE succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b4792/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b4792.dir/build.make CMakeFiles/cmTC_b4792.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b4792.dir/src.cxx.o
+/usr/bin/c++ -DSTL_STD_NAMESPACE   -o CMakeFiles/cmTC_b4792.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b4792
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4792.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_b4792.dir/src.cxx.o -o cmTC_b4792 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <vector>
+std::vector<int> t; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_USING_OPERATOR succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3e13c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3e13c.dir/build.make CMakeFiles/cmTC_3e13c.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3e13c.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_USING_OPERATOR   -o CMakeFiles/cmTC_3e13c.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3e13c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e13c.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_3e13c.dir/src.cxx.o -o cmTC_3e13c 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <iostream>
+std::ostream& operator<<(std::ostream&, struct s);
+using ::operator<<;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_NAMESPACES succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_29fc7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_29fc7.dir/build.make CMakeFiles/cmTC_29fc7.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29fc7.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_NAMESPACES   -o CMakeFiles/cmTC_29fc7.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_29fc7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29fc7.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_29fc7.dir/src.cxx.o -o cmTC_29fc7 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+namespace Outer { namespace Inner { int i = 0; }}
+using namespace Outer::Inner;;
+int main() { return i; }
+
+Performing C++ SOURCE FILE Test HAVE_GCC_TLS succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_e576a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e576a.dir/build.make CMakeFiles/cmTC_e576a.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e576a.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_GCC_TLS   -o CMakeFiles/cmTC_e576a.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e576a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e576a.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_e576a.dir/src.cxx.o -o cmTC_e576a 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+__thread int tls;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_TLS succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c8f26/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c8f26.dir/build.make CMakeFiles/cmTC_c8f26.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c8f26.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_TLS   -o CMakeFiles/cmTC_c8f26.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c8f26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8f26.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_c8f26.dir/src.cxx.o -o cmTC_c8f26 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+thread_local int tls;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_ALIGNED_STORAGE succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c7a24/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c7a24.dir/build.make CMakeFiles/cmTC_c7a24.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c7a24.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_ALIGNED_STORAGE   -o CMakeFiles/cmTC_c7a24.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c7a24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7a24.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_c7a24.dir/src.cxx.o -o cmTC_c7a24 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <type_traits>
+std::aligned_storage<sizeof(char), alignof(char)>::type data;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_ATOMIC succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ad501/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad501.dir/build.make CMakeFiles/cmTC_ad501.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ad501.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_ATOMIC   -o CMakeFiles/cmTC_ad501.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ad501
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad501.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ad501.dir/src.cxx.o -o cmTC_ad501 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <atomic>
+std::atomic<int> i;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_NULLPTR_T succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f06f6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f06f6.dir/build.make CMakeFiles/cmTC_f06f6.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f06f6.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_NULLPTR_T   -o CMakeFiles/cmTC_f06f6.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f06f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f06f6.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_f06f6.dir/src.cxx.o -o cmTC_f06f6 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <cstddef>
+void foo(std::nullptr_t) {}
+int main(void) { foo(nullptr); }
+
+Performing C++ SOURCE FILE Test HAVE_LOCALTIME_R succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3bb46/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3bb46.dir/build.make CMakeFiles/cmTC_3bb46.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3bb46.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_LOCALTIME_R   -o CMakeFiles/cmTC_3bb46.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3bb46
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bb46.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_3bb46.dir/src.cxx.o -o cmTC_3bb46 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <cstdlib>
+#include <time.h>
+int main()
+{
+    time_t timep;
+    struct tm result;
+    localtime_r(&timep, &result);
+    return EXIT_SUCCESS;
+}
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8e013/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8e013.dir/build.make CMakeFiles/cmTC_8e013.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8e013.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -fvisibility=hidden -o CMakeFiles/cmTC_8e013.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8e013
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e013.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_8e013.dir/src.cxx.o -o cmTC_8e013 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b7bd0/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b7bd0.dir/build.make CMakeFiles/cmTC_b7bd0.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b7bd0.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -fvisibility-inlines-hidden -o CMakeFiles/cmTC_b7bd0.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_b7bd0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7bd0.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_b7bd0.dir/src.cxx.o -o cmTC_b7bd0 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_bbc70/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bbc70.dir/build.make CMakeFiles/cmTC_bbc70.dir/build
+gmake[1]: Entering directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bbc70.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTC_bbc70.dir/src.cxx.o -c /mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx
+/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx:2:33: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+    2 |     int main() { return somefunc();}
+      |                         ~~~~~~~~^~
+/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+    1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+      |                                     ^~~~~~~~
+Linking CXX executable cmTC_bbc70
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbc70.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_bbc70.dir/src.cxx.o -o cmTC_bbc70 
+gmake[1]: Leaving directory '/mnt/c/Users/ndebe/Desktop/MscEng/aru_sil_core-feature-navigation-ros2_teach_repeat/glog/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}

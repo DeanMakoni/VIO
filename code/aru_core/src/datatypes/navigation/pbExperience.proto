@@ -1,0 +1,24 @@
+syntax = "proto3";
+package datatype.navigation;
+
+import "pbImage.proto";
+import "pbMatrix.proto";
+
+message pbExperience {
+
+  // Time taken
+  int64 timestamp = 1;
+
+  // Image
+  datatype.image.pbImage image_left=2;
+  // 2d keypoints
+  datatype.transform.pbMatrix keypoints=3;
+  // Keypoint Descriptors
+  datatype.image.pbImage descriptors=4;
+  // 3d landmarks
+  datatype.transform.pbMatrix landmarks=5;
+
+  // Appearance Descriptors
+  datatype.transform.pbMatrix bow_desc=6;
+
+}

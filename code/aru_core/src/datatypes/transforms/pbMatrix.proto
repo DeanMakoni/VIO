@@ -1,0 +1,8 @@
+syntax = "proto3";
+package datatype.transform;
+
+message pbMatrix {
+  uint32 rows = 1;
+  uint32 cols = 2;
+  repeated float data = 3;
+}

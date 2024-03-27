@@ -1,0 +1,16 @@
+syntax = "proto3";
+package datatype.mapping;
+
+message pbVoxelBlock {
+  int32 voxels_per_side = 1;
+
+  double voxel_size = 2;
+
+  double origin_x = 3;
+  double origin_y = 4;
+  double origin_z = 5;
+
+  bool has_data = 6;
+
+  repeated uint32 voxel_data = 7;
+}

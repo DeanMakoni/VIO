@@ -1,0 +1,13 @@
+
+syntax = "proto3";
+package datatype.image;
+
+import "pbImage.proto";
+
+message pbStereoImage {
+
+    pbImage image_left=1;
+    pbImage image_right=2;
+    // Time taken
+    int64 timestamp = 3;
+}

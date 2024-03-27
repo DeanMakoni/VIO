@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.cpp
+Random.h
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.h
+Timestamp.h
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Timestamp.h
+cstdlib
+-
+
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.h
+cstdlib
+-
+vector
+-
+
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Timestamp.cpp
+cstdio
+-
+cstdlib
+-
+ctime
+-
+cmath
+-
+sstream
+-
+iomanip
+-
+sys/timeb.h
+-
+sys/time.h
+-
+Timestamp.h
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Timestamp.h
+
+/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Timestamp.h
+iostream
+-
+

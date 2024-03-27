@@ -1,0 +1,22 @@
+syntax = "proto3";
+package datatype.image;
+
+message pbImage {
+
+  int32 width = 1;
+  int32 height = 2;
+
+
+  // Protobuf support enumerator type
+  enum ImageType {
+    RGB_UINT8 = 0; // Default is always 0 in proto3
+    GREY_UINT8 = 1;
+    RGB_FLOAT = 2;
+    GREY_FLOAT = 3;
+    Depth_FLOAT = 4;
+  }
+  // Time taken
+  int64 timestamp = 3;
+  //
+  bytes image_data = 4;
+}

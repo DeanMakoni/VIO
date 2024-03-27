@@ -1,0 +1,15 @@
+syntax = "proto3";
+package datatype.transform;
+
+import "pbMatrix.proto";
+
+message pbTransform {
+
+  string source = 1;
+  string destination = 2;
+
+  int64 source_timestamp=3;
+  int64 dest_timestamp=4;
+
+  pbMatrix transform_matrix=5;
+}
