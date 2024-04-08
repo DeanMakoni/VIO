@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/Downloads/Dean/code/aru_core/src
+CMAKE_SOURCE_DIR = /home/jetson/Downloads/VIO/code/aru_core/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetson/Downloads/Dean/code/aru_core/build
+CMAKE_BINARY_DIR = /home/jetson/Downloads/VIO/code/aru_core/build
 
 # Include any dependencies generated for this target.
 include thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/depend.make
@@ -58,69 +58,69 @@ include thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/progress.make
 include thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/flags.make
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o: thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/flags.make
-thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp
+thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp > CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp > CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.i
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp -o CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/bowmsctrainer.cpp -o CMakeFiles/openFABMAP.dir/src/bowmsctrainer.cpp.s
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o: thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/flags.make
-thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp
+thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp > CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp > CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.i
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp -o CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/chowliutree.cpp -o CMakeFiles/openFABMAP.dir/src/chowliutree.cpp.s
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o: thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/flags.make
-thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp
+thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/fabmap.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/openFABMAP.dir/src/fabmap.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp > CMakeFiles/openFABMAP.dir/src/fabmap.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp > CMakeFiles/openFABMAP.dir/src/fabmap.cpp.i
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/fabmap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/openFABMAP.dir/src/fabmap.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp -o CMakeFiles/openFABMAP.dir/src/fabmap.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/fabmap.cpp -o CMakeFiles/openFABMAP.dir/src/fabmap.cpp.s
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.o: thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/flags.make
-thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/inference.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp
+thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/inference.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/openFABMAP.dir/src/inference.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp > CMakeFiles/openFABMAP.dir/src/inference.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp > CMakeFiles/openFABMAP.dir/src/inference.cpp.i
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/inference.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/openFABMAP.dir/src/inference.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp -o CMakeFiles/openFABMAP.dir/src/inference.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/inference.cpp -o CMakeFiles/openFABMAP.dir/src/inference.cpp.s
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.o: thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/flags.make
-thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/msckd.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp
+thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/openFABMAP.dir/src/msckd.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/openFABMAP.dir/src/msckd.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp > CMakeFiles/openFABMAP.dir/src/msckd.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp > CMakeFiles/openFABMAP.dir/src/msckd.cpp.i
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/src/msckd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/openFABMAP.dir/src/msckd.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp -o CMakeFiles/openFABMAP.dir/src/msckd.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/src/msckd.cpp -o CMakeFiles/openFABMAP.dir/src/msckd.cpp.s
 
 # Object files for target openFABMAP
 openFABMAP_OBJECTS = \
@@ -208,8 +208,8 @@ lib/libopenFABMAP.so: /usr/lib/aarch64-linux-gnu/libopencv_cudaarithm.so.4.6.0
 lib/libopenFABMAP.so: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.6.0
 lib/libopenFABMAP.so: /usr/lib/aarch64-linux-gnu/libopencv_cudev.so.4.6.0
 lib/libopenFABMAP.so: thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../../lib/libopenFABMAP.so"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/openFABMAP.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../../lib/libopenFABMAP.so"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/openFABMAP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/build: lib/libopenFABMAP.so
@@ -217,10 +217,10 @@ thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/build: lib/libopenFABMAP.so
 .PHONY : thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/build
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/clean:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap && $(CMAKE_COMMAND) -P CMakeFiles/openFABMAP.dir/cmake_clean.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap && $(CMAKE_COMMAND) -P CMakeFiles/openFABMAP.dir/cmake_clean.cmake
 .PHONY : thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/clean
 
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/depend:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/Dean/code/aru_core/src /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap /home/jetson/Downloads/Dean/code/aru_core/build /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Downloads/VIO/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/VIO/code/aru_core/src /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap /home/jetson/Downloads/VIO/code/aru_core/build /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/depend
 

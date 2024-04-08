@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -fPIC   -std=gnu++17
 
 CXX_DEFINES = -Dlibviso2_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/opencv4 -I/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src 
+CXX_INCLUDES = -I/usr/include/opencv4 -I/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src 
 

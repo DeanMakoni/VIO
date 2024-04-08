@@ -1,4 +1,4 @@
-# Install script for directory: /home/jetson/Downloads/Dean/code/aru_core/src
+# Install script for directory: /home/jetson/Downloads/VIO/code/aru_core/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/vo/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/vo/cmake_install.cmake")
 
 endif()
 
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jetson/Downloads/Dean/code/aru_core/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jetson/Downloads/VIO/code/aru_core/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

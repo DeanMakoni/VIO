@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 iostream
 -
 map
@@ -14,7 +14,7 @@ map
 vector
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
 opencv2/core.hpp
 -
 vector
@@ -22,7 +22,7 @@ vector
 string
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FORB.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FORB.h
 opencv2/core.hpp
 -
 vector
@@ -30,11 +30,11 @@ vector
 string
 -
 FClass.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
 BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 map
 -
 vector
@@ -42,11 +42,11 @@ vector
 iostream
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
 BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/TemplatedVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/TemplatedVocabulary.h
 cassert
 -
 cstdlib
@@ -64,37 +64,37 @@ algorithm
 opencv2/core.hpp
 -
 FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
 BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 ScoringObject.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.h
 cstdlib
 -
 vector
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/config.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.h
 iostream
 -
 limits
 -
 base_edge.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_edge.h
 robust_kernel.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/robust_kernel.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/robust_kernel.h
 ../../config.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/config.h
 base_binary_edge.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_edge.h
 iostream
 -
 limits
@@ -102,9 +102,9 @@ limits
 Eigen/Core
 -
 optimizable_graph.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/optimizable_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/optimizable_graph.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.h
 iostream
 -
 cassert
@@ -112,23 +112,23 @@ cassert
 limits
 -
 base_edge.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_edge.h
 robust_kernel.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/robust_kernel.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/robust_kernel.h
 ../../config.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/config.h
 base_unary_edge.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
 optimizable_graph.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/optimizable_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/optimizable_graph.h
 creators.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/creators.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/creators.h
 ../stuff/macros.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/macros.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/macros.h
 Eigen/Core
 -
 Eigen/Dense
@@ -140,19 +140,19 @@ Eigen/StdVector
 stack
 -
 base_vertex.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/creators.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/creators.h
 hyper_graph.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
 string
 -
 typeinfo
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
 map
 -
 set
@@ -172,7 +172,7 @@ unordered_map
 tr1/unordered_map
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/jacobian_workspace.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/jacobian_workspace.h
 Eigen/Core
 -
 Eigen/StdVector
@@ -182,17 +182,17 @@ vector
 cassert
 -
 hyper_graph.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/openmp_mutex.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/openmp_mutex.h
 ../../config.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/config.h
 omp.h
 -
 cassert
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/optimizable_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/optimizable_graph.h
 set
 -
 iostream
@@ -206,25 +206,25 @@ cmath
 typeinfo
 -
 openmp_mutex.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/openmp_mutex.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/openmp_mutex.h
 hyper_graph.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
 parameter.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter.h
 parameter_container.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter_container.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter_container.h
 jacobian_workspace.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/jacobian_workspace.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/jacobian_workspace.h
 ../stuff/macros.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/macros.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/macros.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter.h
 iosfwd
 -
 hyper_graph.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/hyper_graph.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter_container.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/parameter_container.h
 iosfwd
 -
 map
@@ -232,7 +232,7 @@ map
 string
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/robust_kernel.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/robust_kernel.h
 memory
 -
 tr1/memory
@@ -240,83 +240,83 @@ tr1/memory
 Eigen/Core
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/macros.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/macros.h
 float.h
 -
 math.h
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
 Eigen/Core
 -
 Eigen/Geometry
 -
 se3_ops.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.hpp
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3quat.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3quat.h
 se3_ops.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
 Eigen/Core
 -
 Eigen/Geometry
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/sim3.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/sim3.h
 se3_ops.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
 Eigen/Geometry
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_sba.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_sba.h
 ../core/base_vertex.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
 Eigen/Geometry
 -
 iostream
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_seven_dof_expmap.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_seven_dof_expmap.h
 ../core/base_vertex.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
 ../core/base_binary_edge.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.h
 types_six_dof_expmap.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_six_dof_expmap.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_six_dof_expmap.h
 sim3.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/sim3.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/sim3.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_six_dof_expmap.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_six_dof_expmap.h
 ../core/base_vertex.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_vertex.h
 ../core/base_binary_edge.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_binary_edge.h
 ../core/base_unary_edge.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/core/base_unary_edge.h
 se3_ops.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3_ops.h
 se3quat.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3quat.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/se3quat.h
 types_sba.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_sba.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_sba.h
 Eigen/Geometry
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Atlas.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Atlas.h
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 Pinhole.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Pinhole.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Pinhole.h
 KannalaBrandt8.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
 set
 -
 mutex
@@ -326,37 +326,37 @@ boost/serialization/vector.hpp
 boost/serialization/export.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Config.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Converter.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Converter.h
 opencv2/core/core.hpp
 -
 Eigen/Dense
 -
 ../g2o/g2o/types/types_six_dof_expmap.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_six_dof_expmap.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_six_dof_expmap.h
 ../g2o/g2o/types/types_seven_dof_expmap.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_seven_dof_expmap.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/types/types_seven_dof_expmap.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 vector
 -
 DBoW2/BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
 DBoW2/FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
 ImuTypes.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
 ORBVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 Config.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Config.h
 mutex
 -
 opencv2/opencv.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 opencv2/core/core.hpp
 -
 opencv2/imgproc/imgproc.hpp
@@ -378,7 +378,7 @@ boost/serialization/assume_abstract.hpp
 Eigen/Geometry
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
 vector
 -
 utility
@@ -398,7 +398,7 @@ boost/serialization/serialization.hpp
 boost/serialization/vector.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
 assert.h
 -
 vector
@@ -412,29 +412,29 @@ boost/serialization/base_object.hpp
 boost/serialization/vector.hpp
 -
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 TwoViewReconstruction.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 DBoW2/BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
 DBoW2/FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
 ORBVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 ORBextractor.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 KeyFrameDatabase.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
 ImuTypes.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 mutex
 -
 boost/serialization/base_object.hpp
@@ -444,7 +444,7 @@ boost/serialization/vector.hpp
 boost/serialization/map.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
 vector
 -
 list
@@ -452,13 +452,13 @@ list
 set
 -
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 ORBVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 boost/serialization/base_object.hpp
 -
 boost/serialization/vector.hpp
@@ -468,11 +468,11 @@ boost/serialization/list.hpp
 mutex
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 set
 -
 pangolin/pangolin.h
@@ -482,13 +482,13 @@ mutex
 boost/serialization/base_object.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 opencv2/core/core.hpp
 -
 mutex
@@ -500,13 +500,13 @@ boost/serialization/array.hpp
 boost/serialization/map.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 DBoW2/FORB.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/FORB.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/FORB.h
 DBoW2/TemplatedVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/TemplatedVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/TemplatedVocabulary.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
 vector
 -
 list
@@ -514,7 +514,7 @@ list
 opencv2/opencv.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBmatcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBmatcher.h
 opencv2/core/core.hpp
 -
 opencv2/features2d/features2d.hpp
@@ -522,13 +522,13 @@ opencv2/features2d/features2d.hpp
 vector
 -
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Pinhole.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Pinhole.h
 assert.h
 -
 vector
@@ -544,45 +544,45 @@ boost/serialization/vector.hpp
 boost/serialization/assume_abstract.hpp
 -
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 TwoViewReconstruction.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
 opencv2/opencv.hpp
 -
 unordered_set
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Atlas.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Atlas.cc
 Atlas.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Atlas.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Atlas.h
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/GeometricCamera.h
 KannalaBrandt8.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.h
 Pinhole.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.cc
 Converter.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Frame.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Frame.cc
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Frame.h
 Converter.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.h
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/GeometricCamera.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.h
 ORBextractor.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.h
 ORBmatcher.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
 KannalaBrandt8.h
 -
 Pinhole.h
@@ -590,55 +590,55 @@ Pinhole.h
 thread
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc
 ImuTypes.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.h
 iostream
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp
 KannalaBrandt8.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.h
 boost/serialization/export.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.h
 Converter.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.h
 ORBmatcher.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
 ImuTypes.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.h
 mutex
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc
 KeyFrameDatabase.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.h
 DBoW2/BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/DBoW2/BowVector.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.h
 mutex
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Map.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Map.cc
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Map.h
 mutex
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.cc
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.h
 ORBmatcher.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
 mutex
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
@@ -652,11 +652,11 @@ vector
 iostream
 -
 ORBextractor.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc
 ORBmatcher.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.h
 limits.h
 -
 opencv2/core/core.hpp
@@ -664,21 +664,21 @@ opencv2/core/core.hpp
 opencv2/features2d/features2d.hpp
 -
 DBoW2/FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/DBoW2/FeatureVector.h
 stdint-gcc.h
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp
 Pinhole.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.h
 boost/serialization/export.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc
 TwoViewReconstruction.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.h
 ../DBow/DUtils/Random.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/DBow/DUtils/Random.h
 thread
 -
 

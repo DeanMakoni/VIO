@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/Downloads/Dean/code/aru_core/src
+CMAKE_SOURCE_DIR = /home/jetson/Downloads/VIO/code/aru_core/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetson/Downloads/Dean/code/aru_core/build
+CMAKE_BINARY_DIR = /home/jetson/Downloads/VIO/code/aru_core/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -443,14 +443,14 @@ vo/clean: vo/CMakeFiles/aru_vo_uninstall.dir/clean
 datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=31,32,33 "Built target aru_datatypes_pbMatrix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=31,32,33 "Built target aru_datatypes_pbMatrix"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/rule
 
 # Convenience name for target.
@@ -470,14 +470,14 @@ datatypes/CMakeFiles/aru_datatypes_pbMatrix.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbImage.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbImage.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbImage.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbImage.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbImage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=23,24,25 "Built target aru_datatypes_pbImage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=23,24,25 "Built target aru_datatypes_pbImage"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbImage.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbImage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbImage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbImage.dir/rule
 
 # Convenience name for target.
@@ -497,14 +497,14 @@ datatypes/CMakeFiles/aru_datatypes_pbImage.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=28,29,30 "Built target aru_datatypes_pbLaser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=28,29,30 "Built target aru_datatypes_pbLaser"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/rule
 
 # Convenience name for target.
@@ -524,14 +524,14 @@ datatypes/CMakeFiles/aru_datatypes_pbLaser.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=34,35 "Built target aru_datatypes_pbStereoImage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=34,35 "Built target aru_datatypes_pbStereoImage"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/rule
 
 # Convenience name for target.
@@ -551,14 +551,14 @@ datatypes/CMakeFiles/aru_datatypes_pbStereoImage.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=41,42,43 "Built target aru_datatypes_pbVoxelLayer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=41,42,43 "Built target aru_datatypes_pbVoxelLayer"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/rule
 
 # Convenience name for target.
@@ -578,14 +578,14 @@ datatypes/CMakeFiles/aru_datatypes_pbVoxelLayer.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=39,40 "Built target aru_datatypes_pbVoxelBlock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=39,40 "Built target aru_datatypes_pbVoxelBlock"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/rule
 
 # Convenience name for target.
@@ -605,14 +605,14 @@ datatypes/CMakeFiles/aru_datatypes_pbVoxelBlock.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=36,37,38 "Built target aru_datatypes_pbTransform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=36,37,38 "Built target aru_datatypes_pbTransform"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/rule
 
 # Convenience name for target.
@@ -632,14 +632,14 @@ datatypes/CMakeFiles/aru_datatypes_pbTransform.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=21,22 "Built target aru_datatypes_pbExperience"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=21,22 "Built target aru_datatypes_pbExperience"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/rule
 
 # Convenience name for target.
@@ -659,14 +659,14 @@ datatypes/CMakeFiles/aru_datatypes_pbExperience.dir/clean:
 datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/all:
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/depend
 	$(MAKE) -f datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/build.make datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=26,27 "Built target aru_datatypes_pbIndex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=26,27 "Built target aru_datatypes_pbIndex"
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/all
 
 # Build rule for subdir invocation for target.
 datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/rule
 
 # Convenience name for target.
@@ -686,14 +686,14 @@ datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/clean:
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/all:
 	$(MAKE) -f thirdparty/DboW2/CMakeFiles/DBoW2.dir/build.make thirdparty/DboW2/CMakeFiles/DBoW2.dir/depend
 	$(MAKE) -f thirdparty/DboW2/CMakeFiles/DBoW2.dir/build.make thirdparty/DboW2/CMakeFiles/DBoW2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target DBoW2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target DBoW2"
 .PHONY : thirdparty/DboW2/CMakeFiles/DBoW2.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/DboW2/CMakeFiles/DBoW2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/DboW2/CMakeFiles/DBoW2.dir/rule
 
 # Convenience name for target.
@@ -713,14 +713,14 @@ thirdparty/DboW2/CMakeFiles/DBoW2.dir/clean:
 thirdparty/libviso/CMakeFiles/libviso2.dir/all:
 	$(MAKE) -f thirdparty/libviso/CMakeFiles/libviso2.dir/build.make thirdparty/libviso/CMakeFiles/libviso2.dir/depend
 	$(MAKE) -f thirdparty/libviso/CMakeFiles/libviso2.dir/build.make thirdparty/libviso/CMakeFiles/libviso2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=87,88,89,90,91 "Built target libviso2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=87,88,89,90,91 "Built target libviso2"
 .PHONY : thirdparty/libviso/CMakeFiles/libviso2.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/libviso/CMakeFiles/libviso2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/libviso/CMakeFiles/libviso2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/libviso/CMakeFiles/libviso2.dir/rule
 
 # Convenience name for target.
@@ -740,14 +740,14 @@ thirdparty/libviso/CMakeFiles/libviso2.dir/clean:
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/all:
 	$(MAKE) -f thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/build.make thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/depend
 	$(MAKE) -f thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/build.make thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=94,95,96,97,98 "Built target openFABMAP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=94,95,96,97,98 "Built target openFABMAP"
 .PHONY : thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/openfabmap/CMakeFiles/openFABMAP.dir/rule
 
 # Convenience name for target.
@@ -768,14 +768,14 @@ thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/all: thirdparty/DboW2/CMakeFiles/DBoW2.d
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/all: thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/all
 	$(MAKE) -f thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/build.make thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/depend
 	$(MAKE) -f thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/build.make thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20 "Built target ORB_SLAM3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16,17,18,19,20 "Built target ORB_SLAM3"
 .PHONY : thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/rule
 
 # Convenience name for target.
@@ -795,14 +795,14 @@ thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/clean:
 thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/all:
 	$(MAKE) -f thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/build.make thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/depend
 	$(MAKE) -f thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/build.make thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=6,7,8 "Built target DBowUtils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=6,7,8 "Built target DBowUtils"
 .PHONY : thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/rule
 
 # Convenience name for target.
@@ -822,14 +822,14 @@ thirdparty/orb/DBow/CMakeFiles/DBowUtils.dir/clean:
 thirdparty/orb/g2o/CMakeFiles/g2o.dir/all:
 	$(MAKE) -f thirdparty/orb/g2o/CMakeFiles/g2o.dir/build.make thirdparty/orb/g2o/CMakeFiles/g2o.dir/depend
 	$(MAKE) -f thirdparty/orb/g2o/CMakeFiles/g2o.dir/build.make thirdparty/orb/g2o/CMakeFiles/g2o.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86 "Built target g2o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86 "Built target g2o"
 .PHONY : thirdparty/orb/g2o/CMakeFiles/g2o.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/orb/g2o/CMakeFiles/g2o.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 25
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/orb/g2o/CMakeFiles/g2o.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/orb/g2o/CMakeFiles/g2o.dir/rule
 
 # Convenience name for target.
@@ -849,14 +849,14 @@ thirdparty/orb/g2o/CMakeFiles/g2o.dir/clean:
 thirdparty/minkindr/CMakeFiles/minkindr.dir/all:
 	$(MAKE) -f thirdparty/minkindr/CMakeFiles/minkindr.dir/build.make thirdparty/minkindr/CMakeFiles/minkindr.dir/depend
 	$(MAKE) -f thirdparty/minkindr/CMakeFiles/minkindr.dir/build.make thirdparty/minkindr/CMakeFiles/minkindr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=92,93 "Built target minkindr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=92,93 "Built target minkindr"
 .PHONY : thirdparty/minkindr/CMakeFiles/minkindr.dir/all
 
 # Build rule for subdir invocation for target.
 thirdparty/minkindr/CMakeFiles/minkindr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 thirdparty/minkindr/CMakeFiles/minkindr.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : thirdparty/minkindr/CMakeFiles/minkindr.dir/rule
 
 # Convenience name for target.
@@ -876,14 +876,14 @@ thirdparty/minkindr/CMakeFiles/minkindr.dir/clean:
 utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/all:
 	$(MAKE) -f utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/build.make utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/depend
 	$(MAKE) -f utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/build.make utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num= "Built target aru_utilities_camera_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num= "Built target aru_utilities_camera_uninstall"
 .PHONY : utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/camera/CMakeFiles/aru_utilities_camera_uninstall.dir/rule
 
 # Convenience name for target.
@@ -909,14 +909,14 @@ utilities/camera/CMakeFiles/aru_utilities_camera.dir/all: datatypes/CMakeFiles/a
 utilities/camera/CMakeFiles/aru_utilities_camera.dir/all: utilities/logging/CMakeFiles/aru_utilities_logging.dir/all
 	$(MAKE) -f utilities/camera/CMakeFiles/aru_utilities_camera.dir/build.make utilities/camera/CMakeFiles/aru_utilities_camera.dir/depend
 	$(MAKE) -f utilities/camera/CMakeFiles/aru_utilities_camera.dir/build.make utilities/camera/CMakeFiles/aru_utilities_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=44 "Built target aru_utilities_camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=44 "Built target aru_utilities_camera"
 .PHONY : utilities/camera/CMakeFiles/aru_utilities_camera.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/camera/CMakeFiles/aru_utilities_camera.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/camera/CMakeFiles/aru_utilities_camera.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/camera/CMakeFiles/aru_utilities_camera.dir/rule
 
 # Convenience name for target.
@@ -938,14 +938,14 @@ utilities/camera/CMakeFiles/uninstall.dir/all: utilities/viewer/CMakeFiles/aru_u
 utilities/camera/CMakeFiles/uninstall.dir/all: vo/CMakeFiles/aru_vo_uninstall.dir/all
 	$(MAKE) -f utilities/camera/CMakeFiles/uninstall.dir/build.make utilities/camera/CMakeFiles/uninstall.dir/depend
 	$(MAKE) -f utilities/camera/CMakeFiles/uninstall.dir/build.make utilities/camera/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : utilities/camera/CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/camera/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/camera/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/camera/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -970,14 +970,14 @@ utilities/logging/CMakeFiles/aru_utilities_logging.dir/all: datatypes/CMakeFiles
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/all: datatypes/CMakeFiles/aru_datatypes_pbIndex.dir/all
 	$(MAKE) -f utilities/logging/CMakeFiles/aru_utilities_logging.dir/build.make utilities/logging/CMakeFiles/aru_utilities_logging.dir/depend
 	$(MAKE) -f utilities/logging/CMakeFiles/aru_utilities_logging.dir/build.make utilities/logging/CMakeFiles/aru_utilities_logging.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=50 "Built target aru_utilities_logging"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=50 "Built target aru_utilities_logging"
 .PHONY : utilities/logging/CMakeFiles/aru_utilities_logging.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/logging/CMakeFiles/aru_utilities_logging.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/logging/CMakeFiles/aru_utilities_logging.dir/rule
 
 # Convenience name for target.
@@ -1007,14 +1007,14 @@ utilities/image/CMakeFiles/aru_utilities_image.dir/all: thirdparty/orb/DBow/CMak
 utilities/image/CMakeFiles/aru_utilities_image.dir/all: utilities/logging/CMakeFiles/aru_utilities_logging.dir/all
 	$(MAKE) -f utilities/image/CMakeFiles/aru_utilities_image.dir/build.make utilities/image/CMakeFiles/aru_utilities_image.dir/depend
 	$(MAKE) -f utilities/image/CMakeFiles/aru_utilities_image.dir/build.make utilities/image/CMakeFiles/aru_utilities_image.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=45,46,47,48,49 "Built target aru_utilities_image"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=45,46,47,48,49 "Built target aru_utilities_image"
 .PHONY : utilities/image/CMakeFiles/aru_utilities_image.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/image/CMakeFiles/aru_utilities_image.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 46
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 46
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/image/CMakeFiles/aru_utilities_image.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/image/CMakeFiles/aru_utilities_image.dir/rule
 
 # Convenience name for target.
@@ -1041,14 +1041,14 @@ utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/all: datatypes/CMak
 utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/all: utilities/logging/CMakeFiles/aru_utilities_logging.dir/all
 	$(MAKE) -f utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/build.make utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/depend
 	$(MAKE) -f utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/build.make utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=53,54,55 "Built target aru_utilities_transforms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=53,54,55 "Built target aru_utilities_transforms"
 .PHONY : utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/rule
 
 # Convenience name for target.
@@ -1081,14 +1081,14 @@ utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/all: utilities/image/CMakeF
 utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/all: utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/all
 	$(MAKE) -f utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/build.make utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/depend
 	$(MAKE) -f utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/build.make utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=56,57,58 "Built target aru_utilities_viewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=56,57,58 "Built target aru_utilities_viewer"
 .PHONY : utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 55
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/rule
 
 # Convenience name for target.
@@ -1108,14 +1108,14 @@ utilities/viewer/CMakeFiles/aru_utilities_viewer.dir/clean:
 utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/all:
 	$(MAKE) -f utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/build.make utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/depend
 	$(MAKE) -f utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/build.make utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num= "Built target aru_utilities_viewer_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num= "Built target aru_utilities_viewer_uninstall"
 .PHONY : utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/viewer/CMakeFiles/aru_utilities_viewer_uninstall.dir/rule
 
 # Convenience name for target.
@@ -1148,14 +1148,14 @@ utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/all: utilities/imag
 utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/all: utilities/transforms/CMakeFiles/aru_utilities_transforms.dir/all
 	$(MAKE) -f utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/build.make utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/depend
 	$(MAKE) -f utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/build.make utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=51,52 "Built target aru_utilities_navigation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=51,52 "Built target aru_utilities_navigation"
 .PHONY : utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/all
 
 # Build rule for subdir invocation for target.
 utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 54
 	$(MAKE) -f CMakeFiles/Makefile2 utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/rule
 
 # Convenience name for target.
@@ -1192,14 +1192,14 @@ vo/CMakeFiles/ros_vo_node.dir/all: utilities/navigation/CMakeFiles/aru_utilities
 vo/CMakeFiles/ros_vo_node.dir/all: vo/CMakeFiles/aru_vo.dir/all
 	$(MAKE) -f vo/CMakeFiles/ros_vo_node.dir/build.make vo/CMakeFiles/ros_vo_node.dir/depend
 	$(MAKE) -f vo/CMakeFiles/ros_vo_node.dir/build.make vo/CMakeFiles/ros_vo_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=99,100 "Built target ros_vo_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=99,100 "Built target ros_vo_node"
 .PHONY : vo/CMakeFiles/ros_vo_node.dir/all
 
 # Build rule for subdir invocation for target.
 vo/CMakeFiles/ros_vo_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 63
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 63
 	$(MAKE) -f CMakeFiles/Makefile2 vo/CMakeFiles/ros_vo_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : vo/CMakeFiles/ros_vo_node.dir/rule
 
 # Convenience name for target.
@@ -1235,14 +1235,14 @@ vo/CMakeFiles/aru_vo.dir/all: utilities/viewer/CMakeFiles/aru_utilities_viewer.d
 vo/CMakeFiles/aru_vo.dir/all: utilities/navigation/CMakeFiles/aru_utilities_navigation.dir/all
 	$(MAKE) -f vo/CMakeFiles/aru_vo.dir/build.make vo/CMakeFiles/aru_vo.dir/depend
 	$(MAKE) -f vo/CMakeFiles/aru_vo.dir/build.make vo/CMakeFiles/aru_vo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=59,60,61 "Built target aru_vo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=59,60,61 "Built target aru_vo"
 .PHONY : vo/CMakeFiles/aru_vo.dir/all
 
 # Build rule for subdir invocation for target.
 vo/CMakeFiles/aru_vo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 61
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 61
 	$(MAKE) -f CMakeFiles/Makefile2 vo/CMakeFiles/aru_vo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : vo/CMakeFiles/aru_vo.dir/rule
 
 # Convenience name for target.
@@ -1262,14 +1262,14 @@ vo/CMakeFiles/aru_vo.dir/clean:
 vo/CMakeFiles/aru_vo_uninstall.dir/all:
 	$(MAKE) -f vo/CMakeFiles/aru_vo_uninstall.dir/build.make vo/CMakeFiles/aru_vo_uninstall.dir/depend
 	$(MAKE) -f vo/CMakeFiles/aru_vo_uninstall.dir/build.make vo/CMakeFiles/aru_vo_uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num= "Built target aru_vo_uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num= "Built target aru_vo_uninstall"
 .PHONY : vo/CMakeFiles/aru_vo_uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 vo/CMakeFiles/aru_vo_uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 vo/CMakeFiles/aru_vo_uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles 0
 .PHONY : vo/CMakeFiles/aru_vo_uninstall.dir/rule
 
 # Convenience name for target.

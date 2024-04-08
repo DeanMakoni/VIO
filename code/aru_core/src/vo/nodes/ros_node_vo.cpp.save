@@ -50,7 +50,6 @@
 #include <sensor_msgs/msg/imu.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
 //nclude "sensor_msgs/msg/PointField.h"
-#include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/point_cloud2_iterator.hpp"
 #include <std_msgs/msg/header.hpp>
 #include "sensor_msgs/msg/range.hpp"
@@ -95,12 +94,11 @@ using namespace std;
 using namespace gtsam;
 
 using namespace aru::core;
+
 using gtsam::symbol_shorthand::B;  // Bias  (ax,ay,az,gx,gy,gz)
 using gtsam::symbol_shorthand::V;  // Vel   (xdot,ydot,zdot)
 using gtsam::symbol_shorthand::X;  // Pose3 (x,y,z,r,p,y)
 using gtsam::symbol_shorthand::P;  // Pressure bias
-
-
 //using gtsam::symbol_shorthand::B_P; // barometric bias that will be constrained
 class ROSVO : public rclcpp::Node {
 
@@ -109,7 +107,6 @@ explicit ROSVO(const rclcpp::NodeOptions &options);
 
 virtual ~ROSVO();
 std::shared_ptr<gtsam::PreintegrationType> preintegrated;
-
 
 int pressure_bias =0; //barometric bias that will be constrained
 int pressure_count = 0;
@@ -124,8 +121,7 @@ mutable std::mutex graph_mutex;
 //std::unique_ptr<ISAM2> ISAM;
 ISAM2* ISAM = 0;
 Key biasKey = Symbol('b', 0);
-int p = 1; // ISAM counter
-int b = 0; // barometer count
+int p = 1;
 // Initialize factor graph and values estimates on nodes (continually updated by isam.update()) 
 NonlinearFactorGraph* graph = new NonlinearFactorGraph();
 Values newNodes;
@@ -146,8 +142,7 @@ int  landmark_id;  // landmark ID represents the index in the FeatureSPtrVectorS
             message_filters::Subscriber<sensor_msgs::msg::CompressedImage> image_subscriber_2;
  std::shared_ptr<StereoApprxTimeSyncer> stereo_approx_time_syncher_;
 
-uint64_t prev_imu_timestamp;
-
+ 
 protected:
 
 /**
@@ -230,10 +225,7 @@ private:
 
   // Noise models
   noiseModel::Isotropic::shared_ptr prior_landmark_noise = noiseModel::Isotropic::Sigma(3, 0.1);
-  //noiseModel::Diagonal::shared_ptr pose_noise = noiseModel::Diagonal::Sigmas((Vector(6) << Vector3::Constant(0.3),Vector3::Constant(0.1)).finished()); // 30cm std on x,y,z 0.1 rad on      roll,pitch,yaw 
- noiseModel::Diagonal::shared_ptr pose_noise = noiseModel::Diagonal::Sigmas(
-    (Vector(6) << 0.01, 0.01, 0.01, 0.5, 0.5, 0.5).finished() // (roll,pitch,yaw in rad; std on x,y,z in meters)
-  );
+  noiseModel::Diagonal::shared_ptr pose_noise = noiseModel::Diagonal::Sigmas((Vector(6) << Vector3::Constant(0.3),Vector3::Constant(0.1)).finished()); // 30cm std on x,y,z 0.1 rad on      roll,pitch,yaw 
   noiseModel::Isotropic::shared_ptr pose_landmark_noise = noiseModel::Isotropic::Sigma(3, 10.0); // one pixel in u and v
 
    // Noise models for IMU 
@@ -370,7 +362,9 @@ ROSVO::ROSVO(const rclcpp::NodeOptions &options) : Node("vo_node", options) {
   stereo_subscriber_left.subscribe(this, stereo_topic_left);
  
   sync = std::make_shared<message_filters::TimeSynchronizer<sensor_msgs::msg::CompressedImage,sensor_msgs::msg::CompressedImage>>(stereo_subsriber_right,stereo_subscriber_left ,3);
-
+//sync->getPolicy()->setMaxIntervalDuration(rclcpp::Duration(10,0));
+//sync->registerCallback(std::bind(&ROSVO::callback_function, this, std::placeholders::_1, std::placeholders::_2));
+ 
 image_subscriber_1.subscribe(
       this, "slave1/image_raw/compressed",
       rmw_qos_profile_sensor_data);
@@ -383,10 +377,10 @@ stereo_approx_time_syncher_.reset(
                   image_subscriber_1,
                   image_subscriber_2));
                                   
-stereo_approx_time_syncher_->registerCallback(
-                std::bind(
-                  &ROSVO::callback_function, this, std::placeholders::_1,
-                                    std::placeholders::_2));
+//stereo_approx_time_syncher_->registerCallback(
+//                std::bind(
+//                  &ROSVO::callback_function, this, std::placeholders::_1,
+//                                    std::placeholders::_2));
 
   
    
@@ -498,8 +492,7 @@ depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
  
   prev_bias = prior_imu_bias;
   auto p1 = p;
- // preintegrated = std::make_shared<PreintegratedImuMeasurements>(p1, prior_imu_bias);
-  preintegrated = std::make_shared<PreintegratedCombinedMeasurements>(p1, prior_imu_bias);
+  preintegrated = std::make_shared<PreintegratedImuMeasurements>(p1, prior_imu_bias);
   assert(preintegrated);
 }
 
@@ -519,7 +512,7 @@ void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstShar
   // Get images from msg
  cv::Mat left_image = cv::imdecode(cv::Mat(msg_right->data), cv::IMREAD_COLOR);
  cv::Mat right_image = cv::imdecode(cv::Mat(msg_left->data), cv::IMREAD_COLOR);
- RCLCPP_INFO(get_logger(), "Filtered Stereo Topic Received "); 
+ RCLCPP_INFO(get_logger(), "Filtered Stereo Topic Received 2"); 
   
  cv::Mat left_gray, right_gray;
  cv::cvtColor(left_image, left_gray, cv::COLOR_BGR2GRAY);
@@ -542,7 +535,7 @@ void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstShar
   uint64_t seconds = h.stamp.sec;
   uint64_t nanoseconds = h.stamp.nanosec;
   uint64_t time_out = seconds * 1000 + floor(nanoseconds / 1000000);
-  
+
   // change these values accordingly
   aru::core::utilities::image::MatcherParams matcher_params;
   aru::core::utilities::image::ExtractorParams extractor_params;
@@ -575,7 +568,8 @@ void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstShar
    
   // Convert features to landmark and add them to the graph  
   featureToLandmark(left_gray, right_gray);  
-           
+        
+  RCLCPP_INFO(get_logger(), "Filtered Stereo Topic Received 3");   
   // publish every feature in features   
    for(auto feat : *features){
 
@@ -778,51 +772,7 @@ void ROSVO::imu_callback_function(const sensor_msgs::msg::Imu::SharedPtr msg){
 // Lock the thread
  graph_mutex.lock();
  
- 
- int next_pose_key = this->key("pose");
- int next_velocity_key = this->key("velocity");
- int next_bias_key = this->key("imu_bias");
- auto current_timestamp = msg->header.stamp;
- 
-if (next_pose_key == 0){
-       
-       geometry_msgs::msg::Quaternion orient = msg->orientation; 
-       prior_pose = Pose3(gtsam::Rot3::Quaternion(orient.x, orient.y,orient.z,orient.w), Point3(0, 0,0));
-       //prior_pose = Pose3(gtsam::Rot3::Ypr(0, 0,0), Point3(0, 0,0));
-       prior_velocity = Vector3(0,0,0);
-       double height = 10;
-       //prior_pressure = 1; //change this vlue accordingly
-       // add prior factors for stereo cameras and IMU
-       newNodes.insert(X(next_pose_key), prior_pose);
-       newNodes.insert(V(next_velocity_key), prior_velocity);
-       newNodes.insert(B(next_bias_key), imuBias::ConstantBias());
-      // newNodes.insert(P(next_barometer_key), height); // CHANGE HEIGHT
-      
-      // graph->addPrior(X(next_pose_key), prior_pose, pose_noise); 
-      // graph->addPrior(V(next_velocity_key), prior_velocity, velocity_noise_model);
-      // graph->addPrior(B(next_bias_key),imuBias::ConstantBias() , bias_noise_model);
-       
-      graph->emplace_shared< PriorFactor<Pose3> >(X(next_pose_key),prior_pose, pose_noise);
-      graph->emplace_shared< PriorFactor<Vector3> >(V(next_velocity_key), prior_velocity, velocity_noise_model);
-      graph->emplace_shared< PriorFactor<imuBias::ConstantBias> >(B(next_bias_key),imuBias::ConstantBias() , bias_noise_model);
-       
-       SharedNoiseModel pressure_noise_model = gtsam::noiseModel::Isotropic::Variance(1, 1.0e-6); // change this value accordingly
-      // graph->addPrior(P(next_barometer_key),height, pressure_noise_model);
-       //pose_id = pose_id + 1;
-      // biasKey++;
-       RCLCPP_INFO(get_logger(), "Pose_ID zero");
-      
-     this->increment("pose");
-     this->increment("velocity");
-     this->increment("imu_bias");      
-   
-       
-    }
-    
-    
- else{
- 
- //RCLCPP_INFO(get_logger(), "IMU topic received");
+ RCLCPP_INFO(get_logger(), "IMU topic received");
  Vector3 measuredAcc (msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
  Vector3 measuredOmega (msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z);
  //Check the time stamp 
@@ -830,81 +780,17 @@ if (next_pose_key == 0){
  gtsam::Point3 curr_accel(measuredAcc);
  gtsam::Point3 curr_angular(measuredOmega);
 
- 
- //std::cout << "Timestamp: " << current_timestamp.nanosec << "nanoseconds" << std::endl;
- //std::cout << "Timestamp: " << prev_timestamp  << "seconds" << std::endl;
+ auto current_timestamp = msg->header.stamp;
+ std::cout << "Timestamp: " << current_timestamp.sec << "seconds" << std::endl;
+ std::cout << "Timestamp: " << prev_timestamp  << "seconds" << std::endl;
  
  // Check on how to add the correct dt
-//double dt = current_timestamp.nanosec - prev_imu_timestamp; 
-
-//uint64_t seconds = msg->header.stamp.sec;
-//uint64_t nanoseconds = msg->header.stamp.nanosec;
-//uint64_t time_out = seconds * 1000 + floor(nanoseconds / 1000000);
-
-//double dt = seconds - prev_imu_timestamp;
-double dt = 0.005;
-//prev_imu_timestamp = seconds;
-
-//if (dt != 0){
-  
-   //preintegrated->integrateMeasurement(curr_accel,curr_angular, dt);
-   preintegrated->integrateMeasurement(measuredAcc,measuredOmega, dt);
-// }
-//else{
-//  dt = 0.005; 
-//  preintegrated->integrateMeasurement(curr_accel,curr_angular, dt);
- // }
-RCLCPP_INFO(get_logger(), "Intergrated");
+ double dt = 0.005; 
+ preintegrated->integrateMeasurement(curr_accel,curr_angular, dt);
+ RCLCPP_INFO(get_logger(), "Intergrated");
  
-//RCLCPP_INFO(get_logger(), "Imu callback done");
+ RCLCPP_INFO(get_logger(), "Imu callback done");
  
- 
-if (current_timestamp.nanosec - prev_timestamp > 117401090){
-   
-        // add IMU and Bias factors to graph
-     //auto preint_imu =
-      //   dynamic_cast<const PreintegratedImuMeasurements&>(*preintegrated);
-      auto preint_imu =
-        dynamic_cast<const PreintegratedCombinedMeasurements&>(*preintegrated);
-      //auto preint_imu = std::make_unique<gtsam::PreintegratedImuMeasurements>(
-       //                  CastToPreintergratedImuMeasurements(*preintegrated);
-                         
-     // ImuFactor imu_factor(X(this->key("pose", -1)), X(this->key("pose", -1)),
-      //                     X(this->key("pose")), V(this->key("velocity")),
-     //                      B(this->key("imu_bias")), preint_imu);
-                           
-      //graph->add(imu_factor);
-      RCLCPP_INFO(get_logger(), "IMU factor added");
-      imuBias::ConstantBias zero_bias(Vector3(0, 0, 0), Vector3(0, 0, 0));
-      graph->emplace_shared<CombinedImuFactor>(
-       X(this->key("pose", -1)), V(this->key("pose", -1)),
-       X(this->key("pose")), V(this->key("velocity")),
-       B(this->key("imu_bias", -1)), B(this->key("imu_bias")),
-       preint_imu
-     );
-      //graph->add(BetweenFactor<imuBias::ConstantBias>(
-      //   B(this->key("imu_bias", -1)),B(this->key("imu_bias")) ,zero_bias ,
-       //  bias_noise_model));
-      // RCLCPP_INFO(get_logger(), "Bias factor added");
-       
-      gtsam::NavState  prev_state = NavState(prior_pose,
-                          prior_velocity); 
-      gtsam::NavState prop_state = preintegrated->predict(prev_state, imuBias::ConstantBias());
-      newNodes.insert(X(this->key("pose")), prop_state.pose());
-      newNodes.insert(V(this->key("velocity")), prop_state.v());
-      newNodes.insert(B(this->key("imu_bias")), imuBias::ConstantBias());
-      
-
-   // Optimise and publish
-   this->Optimise_and_publish();
-   prev_timestamp = current_timestamp.nanosec;
-   
-   this->increment("pose");
-   this->increment("velocity");
-   this->increment("imu_bias");
-      
-   }
-  } 
  // unlock the thread 
  graph_mutex.unlock();
  
@@ -919,12 +805,94 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
  // Lock the thread  
  graph_mutex.lock();
  RCLCPP_INFO(get_logger(), "Barometer topic received");
- std::cout << b << std::endl;
- b = b+1;
  // get latest barometer key
  int next_barometer_key = this->key("barometer");
+  int next_pose_key = this->key("pose");
+ int next_velocity_key = this->key("velocity");
+ int next_bias_key = this->key("imu_bias");
  
-   // Create the Gaussian noise model
+   SharedNoiseModel pressure_noise_model = gtsam::noiseModel::Isotropic::Variance(1, 1.0e-6);
+
+ // sensor message's pressure is in pascals, convert it o KPa for gtsam
+ const double pressure = (msg->fluid_pressure/ 1000);
+
+ // create barometric factor
+
+   BarometricFactor pressure_factor(X(this->key("pose")),
+                                      P(this->key("barometer")),pressure,
+                                     pressure_noise_model);
+   graph->add(pressure_factor);
+
+   //TODO: Create barometer bias factors up to the current key
+
+
+   // gtsam::Pose3 pressure_pose = Pose3(gtsam::Rot3::RzRyRx(0, 0,0), Point3(0, 0,1000));
+   newNodes.insert(P(this->key("barometer")), pressure);
+
+
+ if (next_pose_key == 0){
+       
+       prior_pose = Pose3(gtsam::Rot3::Ypr(0, 0,10), Point3(0, 0,10));
+       prior_velocity = Vector3(0,0,0);
+       double height = 10;
+       //prior_pressure = 1; //change this vlue accordingly
+       // add prior factors for stereo cameras and IMU
+       newNodes.insert(X(next_pose_key), prior_pose);
+       newNodes.insert(V(next_velocity_key), prior_velocity);
+       newNodes.insert(B(next_bias_key), imuBias::ConstantBias());
+       //newNodes.insert(P(next_barometer_key), height); // CHANGE HEIGHT
+      
+       graph->addPrior(X(next_pose_key), prior_pose, pose_noise); 
+       //graph->addPrior(P(pose_id), prior_pressure,prior_pressure_noise_model);
+       graph->addPrior(V(next_velocity_key), prior_velocity, velocity_noise_model);
+       //graph->addPrior(B(pose_id), prior_imu_bias, bias_noise_model);
+       graph->addPrior(B(next_bias_key),imuBias::ConstantBias() , bias_noise_model);
+       
+       SharedNoiseModel pressure_noise_model = gtsam::noiseModel::Isotropic::Variance(1, 1.0e-6); // change this value accordingly
+       //graph->addPrior(P(next_barometer_key),height, pressure_noise_model);
+       //pose_id = pose_id + 1;
+      // biasKey++;
+       RCLCPP_INFO(get_logger(), "Pose_ID zero");
+       // Optimise and publish
+      //this->Optimise_and_publish();
+       
+  }
+     
+ else{
+   
+        // add IMU and Bias factors to graph
+     auto preint_imu =
+         dynamic_cast<const PreintegratedImuMeasurements&>(*preintegrated);
+      //auto preint_imu = std::make_unique<gtsam::PreintegratedImuMeasurements>(
+       //                  CastToPreintergratedImuMeasurements(*preintegrated);
+                         
+      ImuFactor imu_factor(X(this->key("pose", -1)), V(this->key("velocity", -1)),
+                           X(this->key("pose")), V(this->key("velocity")),
+                           B(this->key("imu_bias")), preint_imu);
+                           
+      graph->add(imu_factor);
+      RCLCPP_INFO(get_logger(), "IMU factor added");
+      imuBias::ConstantBias zero_bias(Vector3(0, 0, 0), Vector3(0, 0, 0));
+      graph->add(BetweenFactor<imuBias::ConstantBias>(
+         B(this->key("imu_bias")),B(this->key("imu_bias")) , imuBias::ConstantBias(),
+         bias_noise_model));
+       RCLCPP_INFO(get_logger(), "Bias factor added");
+       
+      gtsam::NavState  prev_state = NavState(prior_pose,
+                          prior_velocity); 
+      gtsam::NavState prop_state = preintegrated->predict(prev_state, imuBias::ConstantBias());
+      newNodes.insert(X(this->key("pose")), prop_state.pose());
+      newNodes.insert(V(this->key("velocity")), prop_state.v());
+      newNodes.insert(B(this->key("imu_bias")), imuBias::ConstantBias());
+      
+      // create Brometric factor and add it to the graph
+     
+     double sigma = 0.1; // Adjust this value as needed
+
+     // Create a 1x1 covariance matrix
+    // gtsam::Matrix1 covariance = gtsam::Matrix::Identity(1,1) * msg->variance;
+      gtsam::Matrix1 covariance = gtsam::Matrix::Identity(1,1) * msg->variance;
+  // Create the Gaussian noise model
   SharedNoiseModel pressure_noise_model = gtsam::noiseModel::Isotropic::Variance(1, 1.0e-6);
 
  // sensor message's pressure is in pascals, convert it o KPa for gtsam
@@ -943,15 +911,26 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
    // gtsam::Pose3 pressure_pose = Pose3(gtsam::Rot3::RzRyRx(0, 0,0), Point3(0, 0,1000));
    newNodes.insert(P(this->key("barometer")), pressure);
 
- this->increment("barometer");
+     // Create the Gaussian noise 
+     double pressurebias = 0;
+     
 
+     // Optimise and publish
+      this->Optimise_and_publish();
+      
+       }
+  this->increment("barometer");
+ this->increment("pose");
+ this->increment("velocity");
+ this->increment("imu_bias");
 
   // unlock the thread
   graph_mutex.unlock();
 }
 
 void ROSVO::Optimise_and_publish() {
-            // ISAM2 solver
+   
+       // ISAM2 solver
        RCLCPP_INFO(get_logger(), "ISAM solver");
        //Values Testnode;
        //NonlinearFactorGraph* testgraph = new NonlinearFactorGraph();
@@ -960,16 +939,16 @@ void ROSVO::Optimise_and_publish() {
        std::cout << p << std::endl;
        p = p+1;
        result = ISAM->calculateEstimate();
-        RCLCPP_INFO(get_logger(), "Calculation done.");
        prior_pose = result.at<Pose3>(X(this->key("pose")));
 
-       prior_velocity = result.at<Vector3>(V(this->key("velocity")));
-
-        RCLCPP_INFO(get_logger(), "Calculation done 1");
+       prior_velocity = result.at<Vector3>(this->key("velocity"));
+       
+       
+       RCLCPP_INFO(get_logger(), "Calculation done");
         // reset the graph
         graph->resize(0);
         newNodes.clear();
-
+         
         // Overwrite the beginning of the preintegration for the next step.
       // prev_state = NavState(result.at<Pose3>(X(pose_id - 1)),
          //                   result.at<Vector3>(V(pose_id - 1)));
@@ -980,7 +959,7 @@ void ROSVO::Optimise_and_publish() {
        preintegrated->resetIntegrationAndSetBias(imuBias::ConstantBias());
        // publish poses
 
-       gtsam::Pose3 current_pose = result.at<Pose3>(X(this->key("pose")));
+       gtsam::Pose3 current_pose = result.at<Pose3>(this->key("pose"));
        RCLCPP_INFO(get_logger(), "Pose  Id correct");
        // Extract position
        gtsam::Vector3 position = current_pose.translation();
@@ -1004,7 +983,6 @@ void ROSVO::Optimise_and_publish() {
        pose_msg.orientation.z = quaternion.z();
 
        pose_publisher_->publish(pose_msg);
-
   }    
 
 // Transform feature from image_processor to landmark with 3D coordinates

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbImage.pb.h
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbImage.pb.h
 limits
 -
 string
@@ -44,9 +44,9 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbStereoImage.pb.cc
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbStereoImage.pb.cc
 pbStereoImage.pb.h
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbStereoImage.pb.h
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbStereoImage.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -68,7 +68,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbStereoImage.pb.h
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbStereoImage.pb.h
 limits
 -
 string
@@ -100,7 +100,7 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 pbImage.pb.h
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbImage.pb.h
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbImage.pb.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc

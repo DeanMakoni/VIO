@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/lib/libg2o.pdb"
-  "/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/lib/libg2o.so"
+  "/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/lib/libg2o.pdb"
+  "/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/lib/libg2o.so"
   "CMakeFiles/g2o.dir/g2o/core/batch_stats.cpp.o"
   "CMakeFiles/g2o.dir/g2o/core/cache.cpp.o"
   "CMakeFiles/g2o.dir/g2o/core/estimate_propagator.cpp.o"

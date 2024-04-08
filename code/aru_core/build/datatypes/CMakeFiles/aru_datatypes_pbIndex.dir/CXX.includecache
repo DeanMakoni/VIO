@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbIndex.pb.cc
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbIndex.pb.cc
 pbIndex.pb.h
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbIndex.pb.h
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbIndex.pb.h
 algorithm
 -
 google/protobuf/io/coded_stream.h
@@ -30,7 +30,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/build/datatypes/pbIndex.pb.h
+/home/jetson/Downloads/VIO/code/aru_core/build/datatypes/pbIndex.pb.h
 limits
 -
 string

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/Downloads/Dean/code/aru_core/src
+CMAKE_SOURCE_DIR = /home/jetson/Downloads/VIO/code/aru_core/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetson/Downloads/Dean/code/aru_core/build
+CMAKE_BINARY_DIR = /home/jetson/Downloads/VIO/code/aru_core/build
 
 # Include any dependencies generated for this target.
 include thirdparty/DboW2/CMakeFiles/DBoW2.dir/depend.make
@@ -58,82 +58,82 @@ include thirdparty/DboW2/CMakeFiles/DBoW2.dir/progress.make
 include thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.o: thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
-thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp
+thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/BowVector.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp > CMakeFiles/DBoW2.dir/src/BowVector.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp > CMakeFiles/DBoW2.dir/src/BowVector.cpp.i
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/BowVector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/BowVector.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/BowVector.cpp -o CMakeFiles/DBoW2.dir/src/BowVector.cpp.s
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.o: thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
-thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp
+thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FBrief.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp > CMakeFiles/DBoW2.dir/src/FBrief.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp > CMakeFiles/DBoW2.dir/src/FBrief.cpp.i
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FBrief.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FBrief.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FBrief.cpp -o CMakeFiles/DBoW2.dir/src/FBrief.cpp.s
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.o: thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
-thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FORB.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp
+thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FORB.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FORB.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp > CMakeFiles/DBoW2.dir/src/FORB.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp > CMakeFiles/DBoW2.dir/src/FORB.cpp.i
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FORB.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FORB.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp -o CMakeFiles/DBoW2.dir/src/FORB.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FORB.cpp -o CMakeFiles/DBoW2.dir/src/FORB.cpp.s
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o: thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
-thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp
+thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp > CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp > CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.i
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/FeatureVector.cpp -o CMakeFiles/DBoW2.dir/src/FeatureVector.cpp.s
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o: thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
-thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp
+thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp > CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp > CMakeFiles/DBoW2.dir/src/QueryResults.cpp.i
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/QueryResults.cpp -o CMakeFiles/DBoW2.dir/src/QueryResults.cpp.s
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o: thirdparty/DboW2/CMakeFiles/DBoW2.dir/flags.make
-thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp
+thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp > CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp > CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.i
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/src/ScoringObject.cpp -o CMakeFiles/DBoW2.dir/src/ScoringObject.cpp.s
 
 # Object files for target DBoW2
 DBoW2_OBJECTS = \
@@ -223,8 +223,8 @@ lib/libDBoW2.so: /usr/lib/aarch64-linux-gnu/libopencv_cudaarithm.so.4.6.0
 lib/libDBoW2.so: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.6.0
 lib/libDBoW2.so: /usr/lib/aarch64-linux-gnu/libopencv_cudev.so.4.6.0
 lib/libDBoW2.so: thirdparty/DboW2/CMakeFiles/DBoW2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library ../../lib/libDBoW2.so"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DBoW2.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library ../../lib/libDBoW2.so"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DBoW2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/build: lib/libDBoW2.so
@@ -232,10 +232,10 @@ thirdparty/DboW2/CMakeFiles/DBoW2.dir/build: lib/libDBoW2.so
 .PHONY : thirdparty/DboW2/CMakeFiles/DBoW2.dir/build
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/clean:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 && $(CMAKE_COMMAND) -P CMakeFiles/DBoW2.dir/cmake_clean.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 && $(CMAKE_COMMAND) -P CMakeFiles/DBoW2.dir/cmake_clean.cmake
 .PHONY : thirdparty/DboW2/CMakeFiles/DBoW2.dir/clean
 
 thirdparty/DboW2/CMakeFiles/DBoW2.dir/depend:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/Dean/code/aru_core/src /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2 /home/jetson/Downloads/Dean/code/aru_core/build /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2 /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2/CMakeFiles/DBoW2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Downloads/VIO/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/VIO/code/aru_core/src /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2 /home/jetson/Downloads/VIO/code/aru_core/build /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2 /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2/CMakeFiles/DBoW2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thirdparty/DboW2/CMakeFiles/DBoW2.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -Wno-long-long -pedantic -O3 -DNDEBUG -fPIC   -std=gnu++17
 
 CXX_DEFINES = -DUSENONFREE -DopenFABMAP_EXPORTS
 
-CXX_INCLUDES = -I/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/openfabmap/include -isystem /usr/include/opencv4 
+CXX_INCLUDES = -I/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/openfabmap/include -isystem /usr/include/opencv4 
 

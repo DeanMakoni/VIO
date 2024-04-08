@@ -1,4 +1,4 @@
-# Install script for directory: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2
+# Install script for directory: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

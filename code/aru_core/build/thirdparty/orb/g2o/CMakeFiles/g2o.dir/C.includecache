@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/os_specific.c
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/os_specific.c
 os_specific.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/os_specific.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/os_specific.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/os_specific.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/g2o/g2o/stuff/os_specific.h
 stdio.h
 -
 stdlib.h

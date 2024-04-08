@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG -fPIC   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jetson/Downloads/Dean/code/aru_core/src/datatypes -I/home/jetson/Downloads/Dean/code/aru_core/src/datatypes/include -I/home/jetson/Downloads/Dean/code/aru_core/build/datatypes 
+CXX_INCLUDES = -I/home/jetson/Downloads/VIO/code/aru_core/src/datatypes -I/home/jetson/Downloads/VIO/code/aru_core/src/datatypes/include -I/home/jetson/Downloads/VIO/code/aru_core/build/datatypes 
 

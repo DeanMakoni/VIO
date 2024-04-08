@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/Downloads/Dean/code/aru_core/src
+CMAKE_SOURCE_DIR = /home/jetson/Downloads/VIO/code/aru_core/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetson/Downloads/Dean/code/aru_core/build
+CMAKE_BINARY_DIR = /home/jetson/Downloads/VIO/code/aru_core/build
 
 # Include any dependencies generated for this target.
 include thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/depend.make
@@ -58,173 +58,173 @@ include thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/progress.make
 include thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc > CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc > CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc -o CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBextractor.cc -o CMakeFiles/ORB_SLAM3.dir/src/ORBextractor.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc > CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc > CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc -o CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ORBmatcher.cc -o CMakeFiles/ORB_SLAM3.dir/src/ORBmatcher.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc > CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc > CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc -o CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/TwoViewReconstruction.cc -o CMakeFiles/ORB_SLAM3.dir/src/TwoViewReconstruction.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Atlas.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Atlas.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Atlas.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Atlas.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Atlas.cc > CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Atlas.cc > CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Atlas.cc -o CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Atlas.cc -o CMakeFiles/ORB_SLAM3.dir/src/Atlas.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp > CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp > CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp -o CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Pinhole.cpp -o CMakeFiles/ORB_SLAM3.dir/src/Pinhole.cpp.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.cc > CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.cc > CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Converter.cc -o CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Converter.cc -o CMakeFiles/ORB_SLAM3.dir/src/Converter.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.cc > CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.cc > CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/MapPoint.cc -o CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/MapPoint.cc -o CMakeFiles/ORB_SLAM3.dir/src/MapPoint.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc > CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc > CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrame.cc -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrame.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Map.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Map.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Map.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Map.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Map.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/Map.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Map.cc > CMakeFiles/ORB_SLAM3.dir/src/Map.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Map.cc > CMakeFiles/ORB_SLAM3.dir/src/Map.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Map.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/Map.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Map.cc -o CMakeFiles/ORB_SLAM3.dir/src/Map.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Map.cc -o CMakeFiles/ORB_SLAM3.dir/src/Map.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Frame.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Frame.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Frame.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Frame.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Frame.cc > CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Frame.cc > CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/Frame.cc -o CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/Frame.cc -o CMakeFiles/ORB_SLAM3.dir/src/Frame.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc > CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc > CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KeyFrameDatabase.cc -o CMakeFiles/ORB_SLAM3.dir/src/KeyFrameDatabase.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc > CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc > CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc -o CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/ImuTypes.cc -o CMakeFiles/ORB_SLAM3.dir/src/ImuTypes.cc.s
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/flags.make
-thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp
+thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp > CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp > CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.i
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp -o CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/src/KannalaBrandt8.cpp -o CMakeFiles/ORB_SLAM3.dir/src/KannalaBrandt8.cpp.s
 
 # Object files for target ORB_SLAM3
 ORB_SLAM3_OBJECTS = \
@@ -417,8 +417,8 @@ lib/libORB_SLAM3.so: /usr/lib/aarch64-linux-gnu/libopencv_cudaarithm.so.4.6.0
 lib/libORB_SLAM3.so: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.6.0
 lib/libORB_SLAM3.so: /usr/lib/aarch64-linux-gnu/libopencv_cudev.so.4.6.0
 lib/libORB_SLAM3.so: thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library ../../lib/libORB_SLAM3.so"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ORB_SLAM3.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library ../../lib/libORB_SLAM3.so"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ORB_SLAM3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/build: lib/libORB_SLAM3.so
@@ -426,10 +426,10 @@ thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/build: lib/libORB_SLAM3.so
 .PHONY : thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/build
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/clean:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb && $(CMAKE_COMMAND) -P CMakeFiles/ORB_SLAM3.dir/cmake_clean.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb && $(CMAKE_COMMAND) -P CMakeFiles/ORB_SLAM3.dir/cmake_clean.cmake
 .PHONY : thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/clean
 
 thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/depend:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/Dean/code/aru_core/src /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb /home/jetson/Downloads/Dean/code/aru_core/build /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb /home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Downloads/VIO/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/VIO/code/aru_core/src /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb /home/jetson/Downloads/VIO/code/aru_core/build /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb /home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : thirdparty/orb/CMakeFiles/ORB_SLAM3.dir/depend
 

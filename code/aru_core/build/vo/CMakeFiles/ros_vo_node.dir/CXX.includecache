@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 iostream
 -
 map
@@ -14,7 +14,7 @@ map
 vector
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
 opencv2/core.hpp
 -
 vector
@@ -22,7 +22,7 @@ vector
 string
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FORB.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FORB.h
 opencv2/core.hpp
 -
 vector
@@ -30,11 +30,11 @@ vector
 string
 -
 FClass.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FClass.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
 BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 map
 -
 vector
@@ -42,11 +42,11 @@ vector
 iostream
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
 BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/TemplatedVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/TemplatedVocabulary.h
 cassert
 -
 cstdlib
@@ -64,17 +64,17 @@ algorithm
 opencv2/core.hpp
 -
 FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/FeatureVector.h
 BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/BowVector.h
 ScoringObject.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/DboW2/include/DBoW2/ScoringObject.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/matcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/matcher.h
 algorithm
 -
 sse_to_neon.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/sse_to_neon.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/sse_to_neon.hpp
 iostream
 -
 math.h
@@ -90,9 +90,9 @@ string.h
 vector
 -
 matrix.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/matrix.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/matrix.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/matrix.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/matrix.h
 stdio.h
 -
 string.h
@@ -106,31 +106,31 @@ vector
 stdint.h
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/sse_to_neon.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/sse_to_neon.hpp
 arm_neon.h
 -
 stdlib.h
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/viso.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/viso.h
 matrix.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/matrix.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/matrix.h
 matcher.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/libviso/src/matcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/libviso/src/matcher.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Atlas.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Atlas.h
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 Pinhole.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Pinhole.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Pinhole.h
 KannalaBrandt8.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
 set
 -
 mutex
@@ -140,27 +140,27 @@ boost/serialization/vector.hpp
 boost/serialization/export.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Config.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 vector
 -
 DBoW2/BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
 DBoW2/FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
 ImuTypes.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
 ORBVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 Config.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Config.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Config.h
 mutex
 -
 opencv2/opencv.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 opencv2/core/core.hpp
 -
 opencv2/imgproc/imgproc.hpp
@@ -182,7 +182,7 @@ boost/serialization/assume_abstract.hpp
 Eigen/Geometry
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
 vector
 -
 utility
@@ -202,7 +202,7 @@ boost/serialization/serialization.hpp
 boost/serialization/vector.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KannalaBrandt8.h
 assert.h
 -
 vector
@@ -216,29 +216,29 @@ boost/serialization/base_object.hpp
 boost/serialization/vector.hpp
 -
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 TwoViewReconstruction.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 DBoW2/BowVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/BowVector.h
 DBoW2/FeatureVector.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/FeatureVector.h
 ORBVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 ORBextractor.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 KeyFrameDatabase.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
 ImuTypes.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ImuTypes.h
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 mutex
 -
 boost/serialization/base_object.hpp
@@ -248,7 +248,7 @@ boost/serialization/vector.hpp
 boost/serialization/map.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrameDatabase.h
 vector
 -
 list
@@ -256,13 +256,13 @@ list
 set
 -
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 ORBVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 boost/serialization/base_object.hpp
 -
 boost/serialization/vector.hpp
@@ -272,11 +272,11 @@ boost/serialization/list.hpp
 mutex
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 set
 -
 pangolin/pangolin.h
@@ -286,13 +286,13 @@ mutex
 boost/serialization/base_object.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 Map.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Map.h
 opencv2/core/core.hpp
 -
 mutex
@@ -304,13 +304,13 @@ boost/serialization/array.hpp
 boost/serialization/map.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBVocabulary.h
 DBoW2/FORB.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/FORB.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/FORB.h
 DBoW2/TemplatedVocabulary.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/DBoW2/TemplatedVocabulary.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/DBoW2/TemplatedVocabulary.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBextractor.h
 vector
 -
 list
@@ -318,7 +318,7 @@ list
 opencv2/opencv.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/ORBmatcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/ORBmatcher.h
 opencv2/core/core.hpp
 -
 opencv2/features2d/features2d.hpp
@@ -326,13 +326,13 @@ opencv2/features2d/features2d.hpp
 vector
 -
 Frame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Frame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Frame.h
 KeyFrame.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/KeyFrame.h
 MapPoint.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/MapPoint.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/MapPoint.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/Pinhole.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/Pinhole.h
 assert.h
 -
 vector
@@ -348,17 +348,17 @@ boost/serialization/vector.hpp
 boost/serialization/assume_abstract.hpp
 -
 GeometricCamera.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/GeometricCamera.h
 TwoViewReconstruction.h
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
 
-/home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
+/home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb/include/TwoViewReconstruction.h
 opencv2/opencv.hpp
 -
 unordered_set
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/camera/include/aru/core/utilities/camera/camera.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/camera/include/aru/core/utilities/camera/camera.h
 Eigen/Geometry
 -
 Eigen/Sparse
@@ -378,9 +378,9 @@ opencv2/opencv.hpp
 utility
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/image/include/aru/core/utilities/image/feature_matcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/image/include/aru/core/utilities/image/feature_matcher.h
 aru/core/utilities/image/point_feature.h
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/image/include/aru/core/utilities/image/aru/core/utilities/image/point_feature.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/image/include/aru/core/utilities/image/aru/core/utilities/image/point_feature.h
 ORBmatcher.h
 -
 Atlas.h
@@ -396,9 +396,9 @@ iostream
 opencv2/core/mat.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/image/include/aru/core/utilities/image/feature_tracker.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/image/include/aru/core/utilities/image/feature_tracker.h
 feature_matcher.h
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/image/include/aru/core/utilities/image/feature_matcher.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/image/include/aru/core/utilities/image/feature_matcher.h
 viso.h
 -
 Eigen/Dense
@@ -412,7 +412,7 @@ iostream
 opencv2/core/mat.hpp
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/image/include/aru/core/utilities/image/image.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/image/include/aru/core/utilities/image/image.h
 Eigen/Sparse
 -
 Eigen/src/Core/Matrix.h
@@ -430,7 +430,7 @@ opencv2/opencv.hpp
 utility
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/image/include/aru/core/utilities/image/point_feature.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/image/include/aru/core/utilities/image/point_feature.h
 Eigen/Dense
 -
 boost/shared_ptr.hpp
@@ -446,13 +446,13 @@ opencv2/core/types.hpp
 utility
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/transforms/include/aru/core/utilities/transforms/transform_map.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/transforms/include/aru/core/utilities/transforms/transform_map.h
 transforms.h
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/transforms/include/aru/core/utilities/transforms/transforms.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/transforms/include/aru/core/utilities/transforms/transforms.h
 map
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/utilities/transforms/include/aru/core/utilities/transforms/transforms.h
+/home/jetson/Downloads/VIO/code/aru_core/src/utilities/transforms/include/aru/core/utilities/transforms/transforms.h
 Eigen/Dense
 -
 boost/shared_ptr.hpp
@@ -464,7 +464,7 @@ iostream
 utility
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/include/aru/core/vo/solver.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/include/aru/core/vo/solver.h
 aru/core/utilities/image/feature_matcher.h
 -
 Eigen/Dense
@@ -474,7 +474,7 @@ glog/logging.h
 iostream
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/include/aru/core/vo/vo.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/include/aru/core/vo/vo.h
 aru/core/utilities/image/feature_matcher.h
 -
 aru/core/utilities/image/image.h
@@ -490,21 +490,21 @@ glog/logging.h
 iostream
 -
 
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/ros_node_vo.cpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/ros_node_vo.cpp
 geometry_msgs/msg/transform_stamped.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/geometry_msgs/msg/transform_stamped.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/geometry_msgs/msg/transform_stamped.hpp
 tf2/LinearMath/Quaternion.h
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/tf2/LinearMath/Quaternion.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/tf2/LinearMath/Quaternion.h
 tf2_eigen/tf2_eigen.h
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/tf2_eigen/tf2_eigen.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/tf2_eigen/tf2_eigen.h
 tf2_ros/transform_broadcaster.h
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/tf2_ros/transform_broadcaster.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/tf2_ros/transform_broadcaster.h
 aru/core/utilities/camera/camera.h
 -
 aru/core/utilities/image/image.h
 -
 aru/core/utilities/image/feature_tracker.h
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/aru/core/utilities/image/feature_tracker.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/aru/core/utilities/image/feature_tracker.h
 aru/core/utilities/transforms/transform_map.h
 -
 aru/core/utilities/transforms/transforms.h
@@ -544,27 +544,29 @@ opencv2/opencv.hpp
 rclcpp/rclcpp.hpp
 -
 geometry_msgs/msg/pose.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/geometry_msgs/msg/pose.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/geometry_msgs/msg/pose.hpp
 sensor_msgs/msg/camera_info.hpp
 -
 sensor_msgs/msg/imu.hpp
 -
 sensor_msgs/msg/point_cloud2.hpp
 -
+rclcpp/rclcpp.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/rclcpp/rclcpp.hpp
 sensor_msgs/point_cloud2_iterator.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/sensor_msgs/point_cloud2_iterator.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/sensor_msgs/point_cloud2_iterator.hpp
 std_msgs/msg/header.hpp
 -
 sensor_msgs/msg/range.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/sensor_msgs/msg/range.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/sensor_msgs/msg/range.hpp
 sensor_msgs/msg/fluid_pressure.hpp
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/sensor_msgs/msg/fluid_pressure.hpp
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/sensor_msgs/msg/fluid_pressure.hpp
 sensor_msgs/msg/compressed_image.hpp
 -
 message_filters/subscriber.h
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/message_filters/subscriber.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/message_filters/subscriber.h
 message_filters/time_synchronizer.h
-/home/jetson/Downloads/Dean/code/aru_core/src/vo/nodes/message_filters/time_synchronizer.h
+/home/jetson/Downloads/VIO/code/aru_core/src/vo/nodes/message_filters/time_synchronizer.h
 thread
 -
 gtsam/geometry/Pose3.h

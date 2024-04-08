@@ -1,4 +1,4 @@
-# Install script for directory: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty
+# Install script for directory: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/DboW2/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/libviso/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/openfabmap/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/minkindr/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/DboW2/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/libviso/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/openfabmap/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/minkindr/cmake_install.cmake")
 
 endif()
 

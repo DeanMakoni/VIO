@@ -1,4 +1,4 @@
-# Install script for directory: /home/jetson/Downloads/Dean/code/aru_core/src/thirdparty/orb
+# Install script for directory: /home/jetson/Downloads/VIO/code/aru_core/src/thirdparty/orb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb/DBow/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/thirdparty/orb/g2o/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb/DBow/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/thirdparty/orb/g2o/cmake_install.cmake")
 
 endif()
 

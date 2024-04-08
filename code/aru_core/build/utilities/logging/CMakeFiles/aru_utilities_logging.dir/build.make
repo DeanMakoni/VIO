@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/Downloads/Dean/code/aru_core/src
+CMAKE_SOURCE_DIR = /home/jetson/Downloads/VIO/code/aru_core/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetson/Downloads/Dean/code/aru_core/build
+CMAKE_BINARY_DIR = /home/jetson/Downloads/VIO/code/aru_core/build
 
 # Include any dependencies generated for this target.
 include utilities/logging/CMakeFiles/aru_utilities_logging.dir/depend.make
@@ -58,17 +58,17 @@ include utilities/logging/CMakeFiles/aru_utilities_logging.dir/progress.make
 include utilities/logging/CMakeFiles/aru_utilities_logging.dir/flags.make
 
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o: utilities/logging/CMakeFiles/aru_utilities_logging.dir/flags.make
-utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/utilities/logging/src/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/utilities/logging/src/log.cpp
+utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/utilities/logging/src/log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/utilities/logging/src/log.cpp
 
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aru_utilities_logging.dir/src/log.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/utilities/logging/src/log.cpp > CMakeFiles/aru_utilities_logging.dir/src/log.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/utilities/logging/src/log.cpp > CMakeFiles/aru_utilities_logging.dir/src/log.cpp.i
 
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aru_utilities_logging.dir/src/log.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/utilities/logging/src/log.cpp -o CMakeFiles/aru_utilities_logging.dir/src/log.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/utilities/logging/src/log.cpp -o CMakeFiles/aru_utilities_logging.dir/src/log.cpp.s
 
 # Object files for target aru_utilities_logging
 aru_utilities_logging_OBJECTS = \
@@ -80,9 +80,9 @@ aru_utilities_logging_EXTERNAL_OBJECTS =
 utilities/logging/libaru_utilities_logging.a: utilities/logging/CMakeFiles/aru_utilities_logging.dir/src/log.cpp.o
 utilities/logging/libaru_utilities_logging.a: utilities/logging/CMakeFiles/aru_utilities_logging.dir/build.make
 utilities/logging/libaru_utilities_logging.a: utilities/logging/CMakeFiles/aru_utilities_logging.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libaru_utilities_logging.a"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging && $(CMAKE_COMMAND) -P CMakeFiles/aru_utilities_logging.dir/cmake_clean_target.cmake
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aru_utilities_logging.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libaru_utilities_logging.a"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging && $(CMAKE_COMMAND) -P CMakeFiles/aru_utilities_logging.dir/cmake_clean_target.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aru_utilities_logging.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/build: utilities/logging/libaru_utilities_logging.a
@@ -90,10 +90,10 @@ utilities/logging/CMakeFiles/aru_utilities_logging.dir/build: utilities/logging/
 .PHONY : utilities/logging/CMakeFiles/aru_utilities_logging.dir/build
 
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/clean:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging && $(CMAKE_COMMAND) -P CMakeFiles/aru_utilities_logging.dir/cmake_clean.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging && $(CMAKE_COMMAND) -P CMakeFiles/aru_utilities_logging.dir/cmake_clean.cmake
 .PHONY : utilities/logging/CMakeFiles/aru_utilities_logging.dir/clean
 
 utilities/logging/CMakeFiles/aru_utilities_logging.dir/depend:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/Dean/code/aru_core/src /home/jetson/Downloads/Dean/code/aru_core/src/utilities/logging /home/jetson/Downloads/Dean/code/aru_core/build /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging /home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging/CMakeFiles/aru_utilities_logging.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Downloads/VIO/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/VIO/code/aru_core/src /home/jetson/Downloads/VIO/code/aru_core/src/utilities/logging /home/jetson/Downloads/VIO/code/aru_core/build /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging /home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging/CMakeFiles/aru_utilities_logging.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : utilities/logging/CMakeFiles/aru_utilities_logging.dir/depend
 

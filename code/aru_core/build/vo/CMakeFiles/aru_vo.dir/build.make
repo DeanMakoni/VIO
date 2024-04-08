@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/Downloads/Dean/code/aru_core/src
+CMAKE_SOURCE_DIR = /home/jetson/Downloads/VIO/code/aru_core/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetson/Downloads/Dean/code/aru_core/build
+CMAKE_BINARY_DIR = /home/jetson/Downloads/VIO/code/aru_core/build
 
 # Include any dependencies generated for this target.
 include vo/CMakeFiles/aru_vo.dir/depend.make
@@ -58,30 +58,30 @@ include vo/CMakeFiles/aru_vo.dir/progress.make
 include vo/CMakeFiles/aru_vo.dir/flags.make
 
 vo/CMakeFiles/aru_vo.dir/src/vo.cpp.o: vo/CMakeFiles/aru_vo.dir/flags.make
-vo/CMakeFiles/aru_vo.dir/src/vo.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/vo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object vo/CMakeFiles/aru_vo.dir/src/vo.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aru_vo.dir/src/vo.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/vo.cpp
+vo/CMakeFiles/aru_vo.dir/src/vo.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/vo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object vo/CMakeFiles/aru_vo.dir/src/vo.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aru_vo.dir/src/vo.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/vo.cpp
 
 vo/CMakeFiles/aru_vo.dir/src/vo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aru_vo.dir/src/vo.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/vo.cpp > CMakeFiles/aru_vo.dir/src/vo.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/vo.cpp > CMakeFiles/aru_vo.dir/src/vo.cpp.i
 
 vo/CMakeFiles/aru_vo.dir/src/vo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aru_vo.dir/src/vo.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/vo.cpp -o CMakeFiles/aru_vo.dir/src/vo.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/vo.cpp -o CMakeFiles/aru_vo.dir/src/vo.cpp.s
 
 vo/CMakeFiles/aru_vo.dir/src/solver.cpp.o: vo/CMakeFiles/aru_vo.dir/flags.make
-vo/CMakeFiles/aru_vo.dir/src/solver.cpp.o: /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object vo/CMakeFiles/aru_vo.dir/src/solver.cpp.o"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aru_vo.dir/src/solver.cpp.o -c /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/solver.cpp
+vo/CMakeFiles/aru_vo.dir/src/solver.cpp.o: /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object vo/CMakeFiles/aru_vo.dir/src/solver.cpp.o"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/aru_vo.dir/src/solver.cpp.o -c /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/solver.cpp
 
 vo/CMakeFiles/aru_vo.dir/src/solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/aru_vo.dir/src/solver.cpp.i"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/solver.cpp > CMakeFiles/aru_vo.dir/src/solver.cpp.i
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/solver.cpp > CMakeFiles/aru_vo.dir/src/solver.cpp.i
 
 vo/CMakeFiles/aru_vo.dir/src/solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/aru_vo.dir/src/solver.cpp.s"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/Dean/code/aru_core/src/vo/src/solver.cpp -o CMakeFiles/aru_vo.dir/src/solver.cpp.s
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetson/Downloads/VIO/code/aru_core/src/vo/src/solver.cpp -o CMakeFiles/aru_vo.dir/src/solver.cpp.s
 
 # Object files for target aru_vo
 aru_vo_OBJECTS = \
@@ -95,9 +95,9 @@ vo/libaru_vo.a: vo/CMakeFiles/aru_vo.dir/src/vo.cpp.o
 vo/libaru_vo.a: vo/CMakeFiles/aru_vo.dir/src/solver.cpp.o
 vo/libaru_vo.a: vo/CMakeFiles/aru_vo.dir/build.make
 vo/libaru_vo.a: vo/CMakeFiles/aru_vo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/Dean/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libaru_vo.a"
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && $(CMAKE_COMMAND) -P CMakeFiles/aru_vo.dir/cmake_clean_target.cmake
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aru_vo.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetson/Downloads/VIO/code/aru_core/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libaru_vo.a"
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && $(CMAKE_COMMAND) -P CMakeFiles/aru_vo.dir/cmake_clean_target.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/aru_vo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 vo/CMakeFiles/aru_vo.dir/build: vo/libaru_vo.a
@@ -105,10 +105,10 @@ vo/CMakeFiles/aru_vo.dir/build: vo/libaru_vo.a
 .PHONY : vo/CMakeFiles/aru_vo.dir/build
 
 vo/CMakeFiles/aru_vo.dir/clean:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build/vo && $(CMAKE_COMMAND) -P CMakeFiles/aru_vo.dir/cmake_clean.cmake
+	cd /home/jetson/Downloads/VIO/code/aru_core/build/vo && $(CMAKE_COMMAND) -P CMakeFiles/aru_vo.dir/cmake_clean.cmake
 .PHONY : vo/CMakeFiles/aru_vo.dir/clean
 
 vo/CMakeFiles/aru_vo.dir/depend:
-	cd /home/jetson/Downloads/Dean/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/Dean/code/aru_core/src /home/jetson/Downloads/Dean/code/aru_core/src/vo /home/jetson/Downloads/Dean/code/aru_core/build /home/jetson/Downloads/Dean/code/aru_core/build/vo /home/jetson/Downloads/Dean/code/aru_core/build/vo/CMakeFiles/aru_vo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/Downloads/VIO/code/aru_core/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/Downloads/VIO/code/aru_core/src /home/jetson/Downloads/VIO/code/aru_core/src/vo /home/jetson/Downloads/VIO/code/aru_core/build /home/jetson/Downloads/VIO/code/aru_core/build/vo /home/jetson/Downloads/VIO/code/aru_core/build/vo/CMakeFiles/aru_vo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vo/CMakeFiles/aru_vo.dir/depend
 

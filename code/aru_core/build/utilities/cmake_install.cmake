@@ -1,4 +1,4 @@
-# Install script for directory: /home/jetson/Downloads/Dean/code/aru_core/src/utilities
+# Install script for directory: /home/jetson/Downloads/VIO/code/aru_core/src/utilities
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/camera/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/logging/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/image/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/transforms/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/viewer/cmake_install.cmake")
-  include("/home/jetson/Downloads/Dean/code/aru_core/build/utilities/navigation/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/camera/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/logging/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/image/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/transforms/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/viewer/cmake_install.cmake")
+  include("/home/jetson/Downloads/VIO/code/aru_core/build/utilities/navigation/cmake_install.cmake")
 
 endif()
 

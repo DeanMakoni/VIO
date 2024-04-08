@@ -49,6 +49,7 @@ VisoFeatureTracker::VisoFeatureTracker() {
 
   // Create the feature vectors
   curr_features_ = boost::make_shared<FeatureSPtrVector>();
+  tracked_features_ = boost::make_shared<FeatureSPtrVector>();
   matched_features_ = boost::make_shared<FeatureSPtrVector>();
   // Create feature matcher
   viso_extractor_ = boost::make_shared<Matcher>();
@@ -61,6 +62,7 @@ VisoFeatureTracker::VisoFeatureTracker(MatcherParams matcher_params,
 
   // Create the feature vectors
   curr_features_ = boost::make_shared<FeatureSPtrVector>();
+  tracked_features_ = boost::make_shared<FeatureSPtrVector>();
   matched_features_ = boost::make_shared<FeatureSPtrVector>();
   // Create feature matcher
   viso_extractor_ = boost::make_shared<Matcher>();
@@ -179,23 +181,29 @@ void VisoFeatureTracker::UpdateFeatures(const cv::Mat &image_left,
   int32_t height = image_left.rows;
 
   cv::Mat curr_image = image_left.clone();
-
+   
   // compute visual odometry
   int32_t dims[] = {width, height, width};
 
   viso_extractor_->pushBack(image_left.data, image_right.data, dims, false);
+  
   viso_extractor_->matchFeatures(2);
   // viso_extractor_->bucketFeatures(2, 15, 15);
 
   std::vector<Matcher::p_match> p_matched = viso_extractor_->getMatches();
-
+  
+  std::cout << "Viso test 1" << std::endl;
   curr_features_->clear();
+   std::cout << "Viso test 2" << std::endl;
   tracked_features_->clear();
+   std::cout << "Viso test 3" << std::endl;
   landmark_Ids.clear();
   
   FeatureSPtrVectorSptr tracked_features =
       boost::make_shared<FeatureSPtrVector>();
+  std::cout << "Viso test 2" << std::endl;
   FeatureSPtrVectorSptr new_features = boost::make_shared<FeatureSPtrVector>();
+  
   for (auto match : p_matched) {
     float disp = match.u1c - match.u2c;
     if (disp > 0) {
