@@ -100,6 +100,123 @@ using gtsam::symbol_shorthand::V;  // Vel   (xdot,ydot,zdot)
 using gtsam::symbol_shorthand::X;  // Pose3 (x,y,z,r,p,y)
 using gtsam::symbol_shorthand::P;  // Pressure bias
 
+// Stereo Camera node
+class ROSCamera : public rclcpp::Node {
+
+public:
+  explicit ROSCamera(const rclcpp::NodeOptions &options);
+
+  virtual ~ROSCamera();
+ 
+ typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::CompressedImage,
+
+       sensor_msgs::msg::CompressedImage>
+        StereoApprxTimeSyncPolicy;
+ typedef message_filters::Synchronizer<StereoApprxTimeSyncPolicy> StereoApprxTimeSyncer;
+           
+            message_filters::Subscriber<sensor_msgs::msg::CompressedImage> image_subscriber_1;
+            message_filters::Subscriber<sensor_msgs::msg::CompressedImage> image_subscriber_2;
+ std::shared_ptr<StereoApprxTimeSyncer> stereo_approx_time_syncher_;
+  
+protected:
+  bool startCamera();
+  void publishImage(cv::Mat &img, image_transport::CameraPublisher &pubImg,
+                    std::string imgFrameId, rclcpp::Time t);
+
+  // callback functions
+  void callback_function(const sensor_msgs::msg::CompressedImage::ConstSharedPtr &msg_right, 
+      const sensor_msgs::msg::CompressedImage::ConstSharedPtr &msg_left) {
+      
+       
+    // Get images from msg
+   cv::Mat left_image = cv::imdecode(cv::Mat(msg_right->data), cv::IMREAD_COLOR);
+   cv::Mat right_image = cv::imdecode(cv::Mat(msg_left->data), cv::IMREAD_COLOR);
+   RCLCPP_INFO(get_logger(), "Rectified Stereo Topic Received "); 
+  
+    
+
+    // Combine the two images
+    cv::Mat image_rectified;
+    cv::hconcat(left_image, right_image, image_rectified);
+
+    auto mStereoCamInfoMsg = std::make_shared<sensor_msgs::msg::CameraInfo>();
+
+    // Publish the rectified images
+    auto msg_stereo =
+        cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", image_rectified)
+            .toImageMsg();
+            
+    msg_stereo->header.stamp = this->get_clock()->now();
+    mPubStereoRectified.publish(msg_stereo, mStereoCamInfoMsg);
+  }
+
+private:
+  // Shared pointer for camera model
+  std::shared_ptr<aru::core::utilities::camera::StereoCameraModel>
+      stereo_cam_model_;
+
+  // subscribers
+  std::string stereo_topic_;
+  rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr
+      image_stereo_subscriber;
+
+  // Publisher
+  std::string rectified_topic_;
+  image_transport::CameraPublisher mPubStereoRectified;
+};
+
+ROSCamera::ROSCamera(const rclcpp::NodeOptions &options)
+    : Node("camera_node", options) {
+
+  using namespace std::placeholders;
+
+  RCLCPP_INFO(get_logger(), "********************************");
+  RCLCPP_INFO(get_logger(), "      ROS Rectification Node");
+  RCLCPP_INFO(get_logger(), "********************************");
+  RCLCPP_INFO(get_logger(), " * namespace: %s", get_namespace());
+  RCLCPP_INFO(get_logger(), " * node name: %s", get_name());
+  RCLCPP_INFO(get_logger(), "********************************");
+
+  stereo_topic_ = "camera/zed/image_raw";
+  rectified_topic_ = "camera/zed/image_rectified";
+
+ // image_stereo_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
+ //     stereo_topic_, 10,
+ //     std::bind(&ROSCamera::callback_function, this, std::placeholders::_1));
+
+  
+  //stereo_subsriber_right.subscribe(this, stereo_topic_right);
+ // stereo_subscriber_left.subscribe(this, stereo_topic_left);
+ 
+ // sync = std::make_shared<message_filters::TimeSynchronizer<sensor_msgs::msg::CompressedImage,sensor_msgs::msg::CompressedImage>>(stereo_subsriber_right,stereo_subscriber_left ,3);
+
+image_subscriber_1.subscribe(
+      this, "slave1/image_raw/compressed",
+      rmw_qos_profile_sensor_data);
+image_subscriber_2.subscribe(
+      this, "slave2/image_raw/compressed",
+      rmw_qos_profile_sensor_data);
+stereo_approx_time_syncher_.reset(
+                new StereoApprxTimeSyncer(
+                  StereoApprxTimeSyncPolicy(10),
+                  image_subscriber_1,
+                  image_subscriber_2));
+                                  
+stereo_approx_time_syncher_->registerCallback(
+                std::bind(
+                  &ROSCamera::callback_function, this, std::placeholders::_1,
+                                    std::placeholders::_2));
+
+  // Define Publisher
+  mPubStereoRectified =
+      image_transport::create_camera_publisher(this, rectified_topic_);
+  RCLCPP_INFO_STREAM(get_logger(),
+                     "Advertised on topic: " << mPubStereoRectified.getTopic());
+
+}
+ROSCamera::~ROSCamera() { RCLCPP_DEBUG(get_logger(), "Destroying node"); }
+
+
 
 //using gtsam::symbol_shorthand::B_P; // barometric bias that will be constrained
 class ROSVO : public rclcpp::Node {
@@ -118,7 +235,10 @@ imuBias::ConstantBias prev_bias;
 std::shared_ptr<message_filters::TimeSynchronizer<sensor_msgs::msg::CompressedImage, sensor_msgs::msg::CompressedImage>> sync;
 
 // Thread Management
-mutable std::mutex graph_mutex;
+mutable std::mutex stereo_mutex;
+mutable std::mutex imu_mutex;
+mutable std::mutex depth_mutex;
+
 
 // Create iSAM2 object
 //std::unique_ptr<ISAM2> ISAM;
@@ -136,16 +256,7 @@ Vector3 prior_velocity;
 double prior_pressure; // change this value accordingly  
 bool start; // used to initialise visoextractor_
 int  landmark_id;  // landmark ID represents the index in the FeatureSPtrVectorSptr 
-  
- typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::msg::CompressedImage,
-       sensor_msgs::msg::CompressedImage>
-        StereoApprxTimeSyncPolicy;
- typedef message_filters::Synchronizer<StereoApprxTimeSyncPolicy> StereoApprxTimeSyncer;
-           
-            message_filters::Subscriber<sensor_msgs::msg::CompressedImage> image_subscriber_1;
-            message_filters::Subscriber<sensor_msgs::msg::CompressedImage> image_subscriber_2;
- std::shared_ptr<StereoApprxTimeSyncer> stereo_approx_time_syncher_;
-
+ 
 uint64_t prev_imu_timestamp;
 
 protected:
@@ -214,7 +325,7 @@ protected:
 
        // ----> Thread functions
   void test_callback_function(const sensor_msgs::msg::CompressedImage::SharedPtr msg);
-  void callback_function(const sensor_msgs::msg::CompressedImage::ConstSharedPtr& msg_right,const sensor_msgs::msg::CompressedImage::ConstSharedPtr& msg_left);
+  void callback_function(const sensor_msgs::msg::Image::SharedPtr msg);
   void imu_callback_function(const sensor_msgs::msg::Imu::SharedPtr msg);
   void sonar_callback_function(const sensor_msgs::msg::Range::SharedPtr msg);
   void depth_callback_function(const sensor_msgs::msg::FluidPressure::SharedPtr msg);
@@ -260,21 +371,9 @@ private:
   uint64_t prev_timestamp;
 
   // subscribers
-  
-  // Camera subscriber
-  std::string stereo_topic_left;
-  std::string stereo_topic_right;
-  
- rclcpp::Subscription<sensor_msgs::msg::CompressedImage>::SharedPtr
-    image_stereo_subscriber_right ;
-      
-  rclcpp::Subscription<sensor_msgs::msg::CompressedImage>::SharedPtr
-      image_stereo_subscriber_left;
-  
-
-  message_filters::Subscriber<sensor_msgs::msg::CompressedImage> stereo_subsriber_right;
-  message_filters::Subscriber<sensor_msgs::msg::CompressedImage> stereo_subscriber_left;
-  
+  std::string stereo_topic_;
+  rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr
+      image_stereo_subscriber;
  
 
   // Imu subscriber
@@ -334,8 +433,8 @@ ROSVO::ROSVO(const rclcpp::NodeOptions &options) : Node("vo_node", options) {
   RCLCPP_INFO(get_logger(), "********************************");
 
   start = true;
-  stereo_topic_right = "slave1/image_raw/compressed";
-  stereo_topic_left = "slave2/image_raw/compressed";
+ 
+  stereo_topic_ = "camera/zed/image_rectified";
   imu_topic = "imu/imu";
   sonar_topic = "imagenex/range";
   depth_topic = "bar30/pressure";
@@ -356,43 +455,14 @@ ROSVO::ROSVO(const rclcpp::NodeOptions &options) : Node("vo_node", options) {
   this->set_named_key("velocity", 0, 1);
   this->set_named_key("imu_bias", 0, 1);
   
-// image_stereo_subscriber_right = this->create_subscription<sensor_msgs::msg::CompressedImage>(
-    //  stereo_topic_right, 10,
-     // std::bind(&ROSVO::test_callback_function, this, std::placeholders::_1));
- // image_stereo_subscriber_left = this->create_subscription<sensor_msgs::msg::CompressedImage>(
-    //  stereo_topic_left, 10,
-    //  std::bind(&ROSVO::callback_function, this, std::placeholders::_1));
-   
-
-  
-  
-  stereo_subsriber_right.subscribe(this, stereo_topic_right);
-  stereo_subscriber_left.subscribe(this, stereo_topic_left);
  
-  sync = std::make_shared<message_filters::TimeSynchronizer<sensor_msgs::msg::CompressedImage,sensor_msgs::msg::CompressedImage>>(stereo_subsriber_right,stereo_subscriber_left ,3);
-
-image_subscriber_1.subscribe(
-      this, "slave1/image_raw/compressed",
-      rmw_qos_profile_sensor_data);
-image_subscriber_2.subscribe(
-      this, "slave2/image_raw/compressed",
-      rmw_qos_profile_sensor_data);
-stereo_approx_time_syncher_.reset(
-                new StereoApprxTimeSyncer(
-                  StereoApprxTimeSyncPolicy(10),
-                  image_subscriber_1,
-                  image_subscriber_2));
-                                  
-stereo_approx_time_syncher_->registerCallback(
-                std::bind(
-                  &ROSVO::callback_function, this, std::placeholders::_1,
-                                    std::placeholders::_2));
-
-  
-   
+image_stereo_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
+      stereo_topic_, 10,
+      std::bind(&ROSVO::callback_function, this, std::placeholders::_1));
+         
 imu_subscriber = this->create_subscription<sensor_msgs::msg::Imu>(
     imu_topic, 10,
-      std::bind(&ROSVO::imu_callback_function, this, std::placeholders::_1));
+     std::bind(&ROSVO::imu_callback_function, this, std::placeholders::_1));
       
 sonar_subscriber = this->create_subscription<sensor_msgs::msg::Range>(
      sonar_topic, 10, 
@@ -401,7 +471,9 @@ sonar_subscriber = this->create_subscription<sensor_msgs::msg::Range>(
 depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
     depth_topic, 10,
      std::bind(&ROSVO::depth_callback_function, this, std::placeholders::_1));
-  RCLCPP_INFO(get_logger(), "Dean 2");
+  
+  
+ RCLCPP_INFO(get_logger(), "Dean 2");
 
   // Initialise VO params
   auto vo_config_file = "/home/dean/vo_config.yaml";
@@ -510,22 +582,27 @@ void ROSVO::test_callback_function(const sensor_msgs::msg::CompressedImage::Shar
   RCLCPP_INFO(get_logger(), "Stereo Topic Received");
 }
 
-void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstSharedPtr &msg_right, const sensor_msgs::msg::CompressedImage::ConstSharedPtr &msg_left) {
+void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
 
   // lock the thread
-  graph_mutex.lock();
-  
-  
+  stereo_mutex.lock();
+   RCLCPP_INFO(get_logger(), "Filtered Stereo Topic Received "); 
   // Get images from msg
- cv::Mat left_image = cv::imdecode(cv::Mat(msg_right->data), cv::IMREAD_COLOR);
- cv::Mat right_image = cv::imdecode(cv::Mat(msg_left->data), cv::IMREAD_COLOR);
- RCLCPP_INFO(get_logger(), "Filtered Stereo Topic Received "); 
+  cv::Mat image_stereo;
+  cv_bridge::CvImagePtr cv_ptr;
+  cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
+  cv::Mat temp_image = cv_ptr->image;
+  image_stereo = temp_image;
+
+  // Split Images
+  cv::Size s = temp_image.size();
+  int width = s.width;
+  cv::Mat left_image = temp_image(cv::Rect(0, 0, width / 2, s.height));
+  cv::Mat right_image = temp_image(cv::Rect(width / 2, 0, width / 2, s.height));
   
- cv::Mat left_gray, right_gray;
- cv::cvtColor(left_image, left_gray, cv::COLOR_BGR2GRAY);
- cv::cvtColor(right_image, right_gray, cv::COLOR_BGR2GRAY);
- 
-  
+  cv::Mat left_gray, right_gray;
+  cv::cvtColor(left_image, left_gray, cv::COLOR_BGR2GRAY);
+  cv::cvtColor(right_image, right_gray, cv::COLOR_BGR2GRAY);
   //cv_bridge::CvImagePtr cv_ptr;
   //cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
   //cv::Mat temp_image = cv_ptr->image;
@@ -538,7 +615,7 @@ void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstShar
   //cv::Mat right_image = temp_image(cv::Rect(width / 2, 0, width / 2, s.height));
 
   // Get timestamp
-  std_msgs::msg::Header h = msg_right->header;
+  std_msgs::msg::Header h = msg->header;
   uint64_t seconds = h.stamp.sec;
   uint64_t nanoseconds = h.stamp.nanosec;
   uint64_t time_out = seconds * 1000 + floor(nanoseconds / 1000000);
@@ -771,12 +848,12 @@ void ROSVO::callback_function(const sensor_msgs::msg::CompressedImage::ConstShar
 
   // count is the pose_id
   count++;
-  graph_mutex.unlock();
+  stereo_mutex.unlock();
 }
 
 void ROSVO::imu_callback_function(const sensor_msgs::msg::Imu::SharedPtr msg){
 // Lock the thread
- graph_mutex.lock();
+ imu_mutex.lock();
  
  
  int next_pose_key = this->key("pose");
@@ -906,7 +983,7 @@ if (current_timestamp.nanosec - prev_timestamp > 117401090){
    }
   } 
  // unlock the thread 
- graph_mutex.unlock();
+ imu_mutex.unlock();
  
 }
 
@@ -917,7 +994,7 @@ void ROSVO::sonar_callback_function(const sensor_msgs::msg::Range::SharedPtr msg
 void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::SharedPtr msg){
  
  // Lock the thread  
- graph_mutex.lock();
+ depth_mutex.lock();
  RCLCPP_INFO(get_logger(), "Barometer topic received");
  std::cout << b << std::endl;
  b = b+1;
@@ -947,7 +1024,7 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
 
 
   // unlock the thread
-  graph_mutex.unlock();
+  depth_mutex.unlock();
 }
 
 void ROSVO::Optimise_and_publish() {
@@ -1232,7 +1309,9 @@ int main(int argc, char **argv) {
 
   // Add VO Ros node
   auto vo_node = std::make_shared<ROSVO>(options);
+  auto rectify_node = std::make_shared<ROSCamera>(options);
   exec.add_node(vo_node);
+  exec.add_node(rectify_node);
 
   // spin will block until work comes in, execute work as it becomes available,
   // and keep blocking. It will only be interrupted by Ctrl-C.
