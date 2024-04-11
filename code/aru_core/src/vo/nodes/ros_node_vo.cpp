@@ -456,9 +456,9 @@ ROSVO::ROSVO(const rclcpp::NodeOptions &options) : Node("vo_node", options) {
   this->set_named_key("imu_bias", 0, 1);
   
  
-image_stereo_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
-      stereo_topic_, 10,
-      std::bind(&ROSVO::callback_function, this, std::placeholders::_1));
+//image_stereo_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
+//      stereo_topic_, 10,
+//      std::bind(&ROSVO::callback_function, this, std::placeholders::_1));
          
 imu_subscriber = this->create_subscription<sensor_msgs::msg::Imu>(
     imu_topic, 10,
@@ -524,7 +524,7 @@ depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
           "kf/tf2", 10); // kf_tf2_topic_
   pose_publisher_ =
       this->create_publisher<geometry_msgs::msg::Pose>(
-         "gtsm/pose", 10); // pose_topic_
+         "gtsam/pose", 10); // pose_topic_
    macthed_points_publisher_ =
       this->create_publisher<sensor_msgs::msg::PointCloud2>(
         "macthed/points", 10); //macthed_points_topic_
@@ -1038,6 +1038,7 @@ void ROSVO::Optimise_and_publish() {
        p = p+1;
        result = ISAM->calculateEstimate();
         RCLCPP_INFO(get_logger(), "Calculation done.");
+       result.print();
        prior_pose = result.at<Pose3>(X(this->key("pose")));
 
        prior_velocity = result.at<Vector3>(V(this->key("velocity")));
