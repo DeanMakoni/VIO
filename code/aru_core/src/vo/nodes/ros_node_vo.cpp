@@ -51,6 +51,10 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 //nclude "sensor_msgs/msg/PointField.h"
 #include "rclcpp/rclcpp.hpp"
+#include "nav_msgs/msg/odometry.hpp"
+#include "geometry_msgs/msg/pose_stamped.hpp"
+#include "nav_msgs/msg/path.hpp"
+#include <geometry_msgs/msg/pose_with_covariance.hpp>
 #include "sensor_msgs/point_cloud2_iterator.hpp"
 #include <std_msgs/msg/header.hpp>
 #include "sensor_msgs/msg/range.hpp"
@@ -97,7 +101,7 @@ using namespace gtsam;
 using namespace aru::core;
 using gtsam::symbol_shorthand::B;  // Bias  (ax,ay,az,gx,gy,gz)
 using gtsam::symbol_shorthand::V;  // Vel   (xdot,ydot,zdot)
-using gtsam::symbol_shorthand::X;  // Pose3 (x,y,z,r,p,y)
+using gtsam::symbol_shorthand::X;  // Pose3 (x,y,z,r,p,y)//
 using gtsam::symbol_shorthand::P;  // Pressure bias
 
 // Stereo Camera node
@@ -230,6 +234,7 @@ std::shared_ptr<gtsam::PreintegrationType> preintegrated;
 
 int pressure_bias =0; //barometric bias that will be constrained
 int pressure_count = 0;
+
 imuBias::ConstantBias prior_imu_bias;
 imuBias::ConstantBias prev_bias;
 std::shared_ptr<message_filters::TimeSynchronizer<sensor_msgs::msg::CompressedImage, sensor_msgs::msg::CompressedImage>> sync;
@@ -285,13 +290,36 @@ protected:
   // associative container to store keys
   std::map<std::string, NamedKeyInfo> keys;
   
+  // All Timestamps (key -> time)
+  std::map<int, rclcpp::Time> timestamps_;
+  
+  
   // Graph and key management functions
   
+/**
+ * @brief Get the timestamp associated with a particular key value.
+ *
+ * @param key
+ * @return const rclcpp::Time&
+ */
+ const rclcpp::Time& timestamp(const int key) const;
+
+/**
+ * @brief Get the timestamp associated with a named key.
+ *
+ * @param name
+ * @return const rclcpp::Time&
+ */
+ const rclcpp::Time& timestamp(const std::string& key, const int offset = 0) const;
+ // Set time stamps
+ void set_timestamp(const int key, const rclcpp::Time& timestamp);
+ void set_timestamp(const std::string& key, const rclcpp::Time& timestamp, const int offset = 0);
   /**
    * @brief Increment a named key.
    *
    * @param name
    */
+ 
   void increment(const std::string& name);
 
   /**
@@ -410,6 +438,12 @@ private:
 
   std::string kf_image_topic_;
   image_transport::CameraPublisher kf_image_publisher_;
+  
+  std::string optimised_odometry_topic;
+  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr
+  optimised_odometry_publisher_;
+  rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr
+  path_publisher_;
 
   // keyframe selectors
   float min_distance_;
@@ -454,11 +488,12 @@ ROSVO::ROSVO(const rclcpp::NodeOptions &options) : Node("vo_node", options) {
   this->set_named_key("pose", 0, 1);
   this->set_named_key("velocity", 0, 1);
   this->set_named_key("imu_bias", 0, 1);
-  
+  // intialise key for Timestamp
+  this->set_timestamp(0, rclcpp::Time(0, 0));
  
-//image_stereo_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
-//      stereo_topic_, 10,
-//      std::bind(&ROSVO::callback_function, this, std::placeholders::_1));
+image_stereo_subscriber = this->create_subscription<sensor_msgs::msg::Image>(
+      stereo_topic_, 10,
+      std::bind(&ROSVO::callback_function, this, std::placeholders::_1));
          
 imu_subscriber = this->create_subscription<sensor_msgs::msg::Imu>(
     imu_topic, 10,
@@ -482,6 +517,8 @@ depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
   ISAM2Params parameters;
   parameters.relinearizeThreshold = 0.01;
   parameters.relinearizeSkip = 1;
+  parameters.optimizationParams = ISAM2DoglegParams();
+  parameters.factorization = gtsam::ISAM2Params::QR;
   ISAM = new ISAM2(parameters);
   // Initialise VO class
   //vo_ = std::make_shared<aru::core::vo::VO>(vo_config_file, vo_vocab_file);
@@ -528,6 +565,12 @@ depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
    macthed_points_publisher_ =
       this->create_publisher<sensor_msgs::msg::PointCloud2>(
         "macthed/points", 10); //macthed_points_topic_
+   optimised_odometry_publisher_ =
+      this->create_publisher<nav_msgs::msg::Odometry>(
+      "optimisation/odometry", 10);
+    path_publisher_ = 
+            this->create_publisher<nav_msgs::msg::Path>(
+      "output/path", 10);
    
   kf_image_publisher_ =
       image_transport::create_camera_publisher(this, kf_image_topic_);
@@ -937,6 +980,9 @@ RCLCPP_INFO(get_logger(), "Intergrated");
  
  
 if (current_timestamp.nanosec - prev_timestamp > 117401090){
+
+      //TODO: Set timestamp for this pose that we want to optimise
+      this->set_timestamp("pose", current_timestamp);
    
         // add IMU and Bias factors to graph
      //auto preint_imu =
@@ -966,10 +1012,10 @@ if (current_timestamp.nanosec - prev_timestamp > 117401090){
        
       gtsam::NavState  prev_state = NavState(prior_pose,
                           prior_velocity); 
-      gtsam::NavState prop_state = preintegrated->predict(prev_state, imuBias::ConstantBias());
+      gtsam::NavState prop_state = preintegrated->predict(prev_state, prev_bias);
       newNodes.insert(X(this->key("pose")), prop_state.pose());
       newNodes.insert(V(this->key("velocity")), prop_state.v());
-      newNodes.insert(B(this->key("imu_bias")), imuBias::ConstantBias());
+      newNodes.insert(B(this->key("imu_bias")), prev_bias);
       
 
    // Optimise and publish
@@ -996,12 +1042,10 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
  // Lock the thread  
  depth_mutex.lock();
  RCLCPP_INFO(get_logger(), "Barometer topic received");
- std::cout << b << std::endl;
- b = b+1;
  // get latest barometer key
  int next_barometer_key = this->key("barometer");
  
-   // Create the Gaussian noise model
+  //Create the Gaussian noise model
   SharedNoiseModel pressure_noise_model = gtsam::noiseModel::Isotropic::Variance(1, 1.0e-6);
 
  // sensor message's pressure is in pascals, convert it o KPa for gtsam
@@ -1009,18 +1053,21 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
 
  // create barometric factor
 
-   BarometricFactor pressure_factor(X(this->key("pose")),
+  // BarometricFactor pressure_factor(X(this->key("pose")),
+  //                                    P(this->key("barometer")),pressure,
+   //                                  pressure_noise_model);
+   //graph->add(pressure_factor);
+   graph->emplace_shared<BarometricFactor>(X(this->key("pose")),
                                       P(this->key("barometer")),pressure,
                                      pressure_noise_model);
-   graph->add(pressure_factor);
 
    //TODO: Create barometer bias factors up to the current key
 
 
    // gtsam::Pose3 pressure_pose = Pose3(gtsam::Rot3::RzRyRx(0, 0,0), Point3(0, 0,1000));
-   newNodes.insert(P(this->key("barometer")), pressure);
-
- this->increment("barometer");
+  newNodes.insert(P(this->key("barometer")), pressure);
+   
+  this->increment("barometer");
 
 
   // unlock the thread
@@ -1029,16 +1076,22 @@ void ROSVO::depth_callback_function(const sensor_msgs::msg::FluidPressure::Share
 
 void ROSVO::Optimise_and_publish() {
             // ISAM2 solver
+       
+       try{   
+       int max_key = this->key("pose");  
        RCLCPP_INFO(get_logger(), "ISAM solver");
        //Values Testnode;
-       //NonlinearFactorGraph* testgraph = new NonlinearFactorGraph();
-       ISAM->update(*graph, newNodes);
+     // NonlinearFactorGraph* testgraph = new NonlinearFactorGraph();
+      ISAM->update(*graph, newNodes);
        RCLCPP_INFO(get_logger(), "ISAM solver Done for ");
        std::cout << p << std::endl;
        p = p+1;
        result = ISAM->calculateEstimate();
+      // LevenbergMarquardtOptimizer optimizer(*graph, newNodes);
+       //result = optimizer.optimize();
+        
         RCLCPP_INFO(get_logger(), "Calculation done.");
-       result.print();
+       
        prior_pose = result.at<Pose3>(X(this->key("pose")));
 
        prior_velocity = result.at<Vector3>(V(this->key("velocity")));
@@ -1052,13 +1105,22 @@ void ROSVO::Optimise_and_publish() {
       // prev_state = NavState(result.at<Pose3>(X(pose_id - 1)),
          //                   result.at<Vector3>(V(pose_id - 1)));
        RCLCPP_INFO(get_logger(), "Prev state updated");
-       prev_bias = result.at<imuBias::ConstantBias>(biasKey);
+       prev_bias = result.at<imuBias::ConstantBias>(B(this->key("imu_bias")));
         RCLCPP_INFO(get_logger(), "Prev bias updated");
        // Reset the preintegration object.
-       preintegrated->resetIntegrationAndSetBias(imuBias::ConstantBias());
-       // publish poses
-
+       preintegrated->resetIntegrationAndSetBias(prev_bias);
+       
+       
+       // Puublish poses
+      nav_msgs::msg::Odometry optimised_odometry_msg;
+      optimised_odometry_msg.header.stamp = this->now();
+      optimised_odometry_msg.header.frame_id = "map_frame_id";
+      optimised_odometry_msg.child_frame_id = "body_frame_id";
+      //optimised_odometry_msg.header.frame_id = std::to_string(max_key);
+      //optimised_odometry_msg.child_frame_id = std::to_string(max_key);
+        
        gtsam::Pose3 current_pose = result.at<Pose3>(X(this->key("pose")));
+       gtsam::Velocity3 current_velocity = result.at<Velocity3>(V(this->key("velocity")));
        RCLCPP_INFO(get_logger(), "Pose  Id correct");
        // Extract position
        gtsam::Vector3 position = current_pose.translation();
@@ -1066,13 +1128,15 @@ void ROSVO::Optimise_and_publish() {
        gtsam::Rot3 rotation = current_pose.rotation();
 
        gtsam::Quaternion quaternion = rotation.toQuaternion();
-
+       
        // msg for pose_publisher
        geometry_msgs::msg::Pose pose_msg;
        // Set position
        pose_msg.position.x = position.x();
        pose_msg.position.y = position.y();
        pose_msg.position.z = position.z();
+       
+       
 
        // Set orientation (example using roll, pitch, yaw)
       //f::Quaternion quat = tf::createQuaternionFromRPY(0.0, M_PI / 4, 0.0); // Set desired roll, pitch, yaw
@@ -1080,8 +1144,76 @@ void ROSVO::Optimise_and_publish() {
        pose_msg.orientation.x = quaternion.x();
        pose_msg.orientation.y = quaternion.y();
        pose_msg.orientation.z = quaternion.z();
+       
 
+       // Populate the twist message
+       geometry_msgs::msg::Twist twist_msg;
+       twist_msg.linear.x = current_velocity.x();
+       twist_msg.linear.y = current_velocity.y();
+       twist_msg.linear.z = current_velocity.z();
+       
+
+      // Assign twist and pose message to the odometry message
+      optimised_odometry_msg.twist.twist.linear = twist_msg.linear;
+      optimised_odometry_msg.pose.pose = pose_msg;
+      
+       //Odometry msg covariance //
+       //TODO: Disable this when using Stereo factors
+       gtsam::Matrix poseCovariance = ISAM->marginalCovariance(X(this->key("pose")));
+       gtsam::Matrix velocityCovariance = ISAM->marginalCovariance(V(this->key("velocity")));
+       
+       for (int i = 0; i < 6; ++i) {
+         for (int j = 0; j < 6; ++j) {
+             optimised_odometry_msg.pose.covariance[i * 6 + j] = poseCovariance(i, j);
+             optimised_odometry_msg.twist.covariance[i * 6 + j] = poseCovariance(i, j);
+           }   
+    
+       }
+       
+       // Publish Optimised Path and change path
+       nav_msgs::msg::Path path;
+      
+       const std::string frame_id_prefix;
+       path.header.stamp = this->timestamp(max_key);
+       path.header.frame_id = "map_frame_id";
+      // path.header.frame_id = std::to_string(max_key);
+       
+       for (int key = 0; key <= max_key; ++key) {
+       
+          geometry_msgs::msg::PoseStamped pose_msg;
+          pose_msg.header.stamp = this->timestamp(key);
+          pose_msg.header.frame_id = frame_id_prefix + "_" + std::to_string(key);
+          gtsam::Pose3 current_pose = result.at<gtsam::Pose3>(X(key));
+          gtsam::Vector3 position = current_pose.translation();
+         // Extract quaternion and translation
+         gtsam::Rot3 rotation = current_pose.rotation();
+         gtsam::Quaternion quaternion = rotation.toQuaternion();
+      
+         // Set position
+         pose_msg.pose.position.x = position.x();
+         pose_msg.pose.position.y = position.y();
+         pose_msg.pose.position.z = position.z();
+         
+       // Set orientation (example using roll, pitch, yaw)
+         //f::Quaternion quat = tf::createQuaternionFromRPY(0.0, M_PI / 4, 0.0); // Set desired roll, pitch, yaw
+         pose_msg.pose.orientation.w = quaternion.w();
+         pose_msg.pose.orientation.x = quaternion.x();
+         pose_msg.pose.orientation.y = quaternion.y();
+         pose_msg.pose.orientation.z = quaternion.z();
+         
+         path.poses.push_back(pose_msg);
+        }
+       
        pose_publisher_->publish(pose_msg);
+       optimised_odometry_publisher_->publish(optimised_odometry_msg);
+       path_publisher_->publish(path);
+       
+       }
+       catch(const gtsam::IndeterminantLinearSystemException& ex){
+            result.print();    
+       }
+       
+      
 
   }    
 
@@ -1288,6 +1420,25 @@ void ROSVO::set_named_key(const std::string& name, const int key_, const unsigne
         keys.at(name) = NamedKeyInfo{key_, priority_};
     }
 }
+
+const rclcpp::Time& ROSVO::timestamp(const int key_) const {
+    assert(key_ >= 0);
+    return timestamps_.at(key_);
+}
+
+const rclcpp::Time& ROSVO::timestamp(const std::string& key_, const int offset) const {
+    return timestamp(key(key_, offset));
+ }   
+void ROSVO::set_timestamp(const int key_, const rclcpp::Time& timestamp_) {
+    assert(key_ >= 0);
+    auto emplace_it = timestamps_.emplace(key_, timestamp_);
+    emplace_it.first->second = timestamp_;
+}
+
+void ROSVO::set_timestamp(const std::string& key_, const rclcpp::Time& timestamp_, const int offset) {
+    set_timestamp(key(key_, offset), timestamp_);
+}
+
 
 int main(int argc, char **argv) {
 

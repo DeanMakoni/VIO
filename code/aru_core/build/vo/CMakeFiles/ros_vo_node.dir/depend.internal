@@ -131,6 +131,9 @@ vo/CMakeFiles/ros_vo_node.dir/nodes/ros_node_vo.cpp.o
  /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__builder.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__struct.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_stamped__traits.hpp
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance__builder.hpp
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance__struct.hpp
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/pose_with_covariance__traits.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__builder.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__struct.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/quaternion__traits.hpp
@@ -145,12 +148,15 @@ vo/CMakeFiles/ros_vo_node.dir/nodes/ros_node_vo.cpp.o
  /opt/ros/foxy/include/geometry_msgs/msg/detail/twist__builder.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/twist__struct.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/twist__traits.hpp
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/twist_with_covariance__traits.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__struct.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/detail/vector3__traits.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/point.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/point_stamped.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/pose.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/pose_stamped.hpp
+ /opt/ros/foxy/include/geometry_msgs/msg/pose_with_covariance.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/quaternion.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/quaternion_stamped.hpp
  /opt/ros/foxy/include/geometry_msgs/msg/transform_stamped.hpp
@@ -190,6 +196,14 @@ vo/CMakeFiles/ros_vo_node.dir/nodes/ros_node_vo.cpp.o
  /opt/ros/foxy/include/message_filters/synchronizer.h
  /opt/ros/foxy/include/message_filters/time_synchronizer.h
  /opt/ros/foxy/include/message_filters/visibility_control.h
+ /opt/ros/foxy/include/nav_msgs/msg/detail/odometry__builder.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/detail/odometry__struct.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/detail/odometry__traits.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/detail/path__builder.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/detail/path__struct.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/detail/path__traits.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/odometry.hpp
+ /opt/ros/foxy/include/nav_msgs/msg/path.hpp
  /opt/ros/foxy/include/rcl/allocator.h
  /opt/ros/foxy/include/rcl/arguments.h
  /opt/ros/foxy/include/rcl/client.h

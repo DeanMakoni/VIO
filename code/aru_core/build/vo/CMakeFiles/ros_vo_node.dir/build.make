@@ -86,6 +86,10 @@ bin/ros_vo_node: /home/jetson/Pangolin/build/libpango_scene.so
 bin/ros_vo_node: /home/jetson/Pangolin/build/libpango_tools.so
 bin/ros_vo_node: /home/jetson/Pangolin/build/libpango_video.so
 bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libgtsam.so.4.3a0
+bin/ros_vo_node: /opt/ros/foxy/lib/libnav_msgs__rosidl_typesupport_introspection_c.so
+bin/ros_vo_node: /opt/ros/foxy/lib/libnav_msgs__rosidl_typesupport_c.so
+bin/ros_vo_node: /opt/ros/foxy/lib/libnav_msgs__rosidl_typesupport_introspection_cpp.so
+bin/ros_vo_node: /opt/ros/foxy/lib/libnav_msgs__rosidl_typesupport_cpp.so
 bin/ros_vo_node: /opt/ros/foxy/lib/libstatic_transform_broadcaster_node.so
 bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libopencv_gapi.so.4.6.0
 bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.6.0
@@ -811,6 +815,7 @@ bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libtbb.so.2
 bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libtbbmalloc.so.2
 bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libmetis.so
 bin/ros_vo_node: /usr/lib/aarch64-linux-gnu/libcephes-gtsam.so.1.0.0
+bin/ros_vo_node: /opt/ros/foxy/lib/libnav_msgs__rosidl_generator_c.so
 bin/ros_vo_node: /opt/ros/foxy/lib/libament_index_cpp.so
 bin/ros_vo_node: /opt/ros/foxy/lib/libclass_loader.so
 bin/ros_vo_node: /opt/ros/foxy/lib/libcomposition_interfaces__rosidl_typesupport_introspection_c.so
