@@ -627,6 +627,10 @@ fstream
 -
 iostream
 -
+yaml-cpp/yaml.h
+-
+opencv2/core.hpp
+-
 
 /home/jetson/Pangolin/components/pango_core/include/pangolin/compat/type_traits.h
 pangolin/platform.h

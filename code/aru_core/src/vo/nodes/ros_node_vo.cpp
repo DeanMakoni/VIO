@@ -94,6 +94,8 @@
 #include <cstring>
 #include <fstream>
 #include <iostream>
+#include <yaml-cpp/yaml.h>
+#include <opencv2/core.hpp>
 
 using namespace std;
 using namespace gtsam;
@@ -103,6 +105,7 @@ using gtsam::symbol_shorthand::B;  // Bias  (ax,ay,az,gx,gy,gz)
 using gtsam::symbol_shorthand::V;  // Vel   (xdot,ydot,zdot)
 using gtsam::symbol_shorthand::X;  // Pose3 (x,y,z,r,p,y)//
 using gtsam::symbol_shorthand::P;  // Pressure bias
+using gtsam::symbol_shorthand::L;  // Landmark point
 
 // Stereo Camera node
 class ROSCamera : public rclcpp::Node {
@@ -261,7 +264,18 @@ Vector3 prior_velocity;
 double prior_pressure; // change this value accordingly  
 bool start; // used to initialise visoextractor_
 int  landmark_id;  // landmark ID represents the index in the FeatureSPtrVectorSptr 
- 
+
+// Initialize VIO Variables
+double fx;  
+double fy;                   // Camera calibration intrinsics
+double cx;
+double cy;
+double resolution_x;          // Image distortion intrinsics
+double resolution_y;
+double Tx;           // Camera calibration extrinsic: distance from cam0 to cam1
+gtsam::Matrix4 T_cam_imu_mat; // Transform to get to camera IMU frame from camera frame
+
+
 uint64_t prev_imu_timestamp;
 
 protected:
@@ -488,6 +502,8 @@ ROSVO::ROSVO(const rclcpp::NodeOptions &options) : Node("vo_node", options) {
   this->set_named_key("pose", 0, 1);
   this->set_named_key("velocity", 0, 1);
   this->set_named_key("imu_bias", 0, 1);
+  this->set_named_key("landmark", 0, 1);
+  
   // intialise key for Timestamp
   this->set_timestamp(0, rclcpp::Time(0, 0));
  
@@ -543,13 +559,57 @@ depth_subscriber = this->create_subscription<sensor_msgs::msg::FluidPressure>(
   solver_params.ransac_max_iterations = 100;
   solver_params.threshold = 3;
 
-  //RCLCPP_INFO(get_logger(), "Dean 3");
+  
+  
+  
   vo_ = std::make_shared<aru::core::vo::VO>(vo_vocab_file,extractor_params,matcher_params, solver_params);
   
   // Track features for the incoming images 
   viso_extractor_ =  std::make_shared <utilities::image::VisoFeatureTracker>(matcher_params,extractor_params);
-  RCLCPP_INFO(get_logger(), "Dean 4");
-  
+ 
+  // Initialise camera and transformation from .yaml configuration files.
+   // Load YAML file
+   // YAML::Node config = YAML::LoadFile("/home/jetson/Downloads/VIO/code/aru_core/src/vo/config/camchain-imucam-Speedo1.yaml");
+   auto config_file = "/home/jetson/Downloads/VIO/code/aru_core/src/vo/config/camchain-imucam-Speedo1.yaml";
+   cv::FileStorage fs;
+   fs.open(config_file, cv::FileStorage::READ);
+
+   if (!fs.isOpened()) {
+     LOG(ERROR) << "Could not open vo model file: " << config_file;
+  // Handle the error here, maybe exit the program or use default values
+   } 
+    // Extract T_cam_imu matrices for cam0 and cam1
+   
+    //for (size_t i = 0; i < 4; ++i) {
+      //  for (size_t j = 0; j < 4; ++j) {
+        //    T_cam_imu_mat(i, j) = config["cam0"]["T_cam_imu"][i][j].as<float>();
+       // }
+    //}
+   // Extract T_cam_imu from cam0
+    cv::Mat T_cam_imu_mat_cv;
+    fs["cam0"]["T_cam_imu"] >> T_cam_imu_mat_cv;
+
+ // Convert T_cam_imu from cv::Mat to GTSAM Matrix4
+    for (int i = 0; i < T_cam_imu_mat_cv.rows; ++i) {
+        for (int j = 0; j < T_cam_imu_mat_cv.cols; ++j) {
+            T_cam_imu_mat(i, j) = T_cam_imu_mat_cv.at<double>(i, j);
+        }
+    }
+
+   // Extract camera intrinsics
+  fx = fs["cam0"]["intrinsics"][0];
+  fy = fs["cam0"]["intrinsics"][1];
+  cx = fs["cam0"]["intrinsics"][2];
+  cy = fs["cam0"]["intrinsics"][3];
+
+  // Extract distortion coefficients (assuming radtan model)
+
+  // Extract image resolution
+  resolution_x = fs["cam0"]["resolution"][0];
+  resolution_y = fs["cam0"]["resolution"][1];
+
+  // Extract extrinsic parameter (assuming Tx from T_cn_cnm1)
+  Tx = fs["cam1"]["T_cn_cnm1"][0][3];
   
   // Define Publisher
   vo_tf2_publisher_ =
@@ -1242,84 +1302,53 @@ if (start == true){
 	 viso_extractor_->InitialiseFeatures(image_left, image_right, image_left, image_right); 
 	
  }
-// add untracked features to ISAM and graph 
+//TODO: add untracked features to ISAM optimizer and non linear graph 
 viso_extractor_->FeaturesUntracked(image_left, image_right);
-// Get the feature that are not macthed yet
-// Add them to vlues and graph
-// features that are macthed add them to graph only
 aru::core::utilities::image::FeatureSPtrVectorSptr features = viso_extractor_->GetCurrentFeatures();
 RCLCPP_INFO(get_logger(), "Image dimension test 3");      
 
 for (auto feat : *features) {
- // Get feature coordinates
 
+ // Get feature pixel coordinates
  aru::core::utilities::image::Feature& feature = *feat;
  cv::KeyPoint keypoint_left = feature.GetKeyPoint();
  cv::KeyPoint keypoint_right = feature.GetMatchedKeyPoint();
- Eigen::Vector3d worldpoint = feature.GetTriangulatedPoint();// world point
- //TODO: Check how you can use transform from under gtsam so that it is in imu/world coordiantes
+ Eigen::Vector3d camera_point_1 = feature.GetTriangulatedPoint();// feature in Camera frame 
+ gtsam::Point3  camera_point  = gtsam::Point3(camera_point_1);
 
- double uL = keypoint_left.pt.x; //coordinates.first.row(i)(0);  // from example it is being multiplied by resolution, check why - resolution_x is image distortion intrinsics
+ double uL = keypoint_left.pt.x; //coordinates.first.row(i)(0);  // from example it is being multiplied by resolution, check why - resolution_x is image     distortion intrinsics
  double uR = keypoint_right.pt.x; //coordinates.second.row(num)(0); // from example it is being multiplied by resolution check why? 
- double v  = keypoint_right.pt.y; //coordinates.first.row(num)(1);  // same for both left and right images if the stereo cameras are rectified
+ double v  = keypoint_left.pt.y; //coordinates.first.row(num)(1);  // same for both left and right images if the stereo cameras are rectified
  
- // Estimate feature location in camera frame
-  double d = uR-uL;
-  double x = uL;
-  double y = v;
-  double W = d/ 0.2; //distance from cam0 to cam1
-
- // cv::Mat K_matrix =  cv::Mat::zeros(3, 3, CV_64FC1); // intrinsic camera parameters
- // K_matrix.at<double>(0, 0) = 0;//f_u_;   //      [ fx   0  cx ]
-  //K_matrix.at<double>(1, 1) = 0; //f_v_;   //      [  0  fy  cy ]
-  //K_matrix.at<double>(0, 2) = 0; //u_c_;   //      [  0   0   1 ]
-
-// Estimate feature location in camera frame
-// change camera intrinsics accordingly
-  double X_camera =  (x -  637.87114)/W;//(x-cx)/W;
-  double Y_camera =  (y - 331.27469)/W;//(x -cy)/w
-  double Z_camera =  531.14774/W;  //f/W
        
 
- gtsam::Point3 camera_point = gtsam::Point3(X_camera,Y_camera,Z_camera);
-
   //TODO:// If landmark is behind camera, don't add to isam2 graph/point cloud
-  
-
-  //TODO: // Transform landmark coordinates to world frame 
-
-  //TODO: //Add ISAM2 value for feature/landmark if it doesn't already exist
-
-  //bool bool_new_landmark = !result.exists(Symbol('l', landmark_id));
-  //if (bool_new_landmark) {
-     
-      // Landmark is from  
-  Symbol landmark = Symbol('l', landmark_id);
-  newNodes.insert(landmark, worldpoint);
-    //}
-    
-   //Symbol landmark = Symbol('l', landmark_id);
-  // Add ISAM2 factor connecting this frame's pose to the landmark
-  // create stereo camera calibration object with .2m between cameras
-  // change accordingly the K calue depending n the camera parameters
   const Cal3_S2Stereo::shared_ptr K(
-      new Cal3_S2Stereo(1000, 1000, 0, 320, 240, 0.2));
+	      new Cal3_S2Stereo(this->fx,this->fy, 0,this->cx, this->cy, this->Tx));
 
     graph->emplace_shared<
       GenericStereoFactor<Pose3, Point3> >(StereoPoint2(uL, uR, v), 
-        pose_landmark_noise, X(this->key("pose")), landmark, K);
-   landmark_id++;
-    
+        pose_landmark_noise, X(this->key("pose")), L(this->key("landmark")), K);
+  
+  //TODO: // Transform landmark coordinates to world frame 
+  Pose3 camera_pose = Pose3(T_cam_imu_mat)*newNodes.at<Pose3>(X(this->key("pose")));
+  Point3  worldpoint = camera_pose.transformFrom(camera_point);
+  //TODO: //Add ISAM2 value for feature/landmark 
+   
+  
+  newNodes.insert(L(this->key("landmark")), worldpoint);
+
+  landmark_id++; 
+  this->increment("landmark");
   }
   
        
-RCLCPP_INFO(get_logger(), "Image dimension test 4");
 // Update tracked features with new images 
 // add tracked features to graph not to ISAM 
+
 viso_extractor_->UpdateFeatures(image_left, image_right);
-RCLCPP_INFO(get_logger(), "Image dimension test 5");
 aru::core::utilities::image::FeatureSPtrVectorSptr tracked_features = viso_extractor_->GetTrackedFeatures();
-RCLCPP_INFO(get_logger(), "Image dimension test 6");
+
 // get ids of the tracked features 
 std::vector tracked_ids = viso_extractor_->GetTrackedIDs();
 // index is used to iterate throught he IDs
@@ -1336,39 +1365,12 @@ if ( start == false){
 	 aru::core::utilities::image::Feature& feature = *feat;
 	 cv::KeyPoint keypoint_left = feature.GetKeyPoint();
 	 cv::KeyPoint keypoint_right = feature.GetMatchedKeyPoint();
-	 Eigen::Vector3d worldpoint = feature.GetTriangulatedPoint();// world point
-	 //TODO: Check how you can use transform from under gtsam so that it is in imu/world coordiantes
-
-	 double uL = keypoint_left.pt.x; //coordinates.first.row(i)(0);  // from example it is being multiplied by resolution, 
-	 //check why - resolution_x is image distortion intrinsics
-	 double uR = keypoint_right.pt.x; //coordinates.second.row(num)(0); // from example it is being multiplied by resolution check why? 
-	 double v  = keypoint_right.pt.y; //coordinates.first.row(num)(1);  // same for both left and right images if the stereo cameras are rectified
-	 
-	 // Estimate feature location in camera frame
-	  double d = uR-uL;
-	  double x = uL;
-	  double y = v;
-	  double W = d/ 0.2; //distance from cam0 to cam1
-
-	 // cv::Mat K_matrix =  cv::Mat::zeros(3, 3, CV_64FC1); // intrinsic camera parameters
-	 // K_matrix.at<double>(0, 0) = 0;//f_u_;   //      [ fx   0  cx ]
-	  //K_matrix.at<double>(1, 1) = 0; //f_v_;   //      [  0  fy  cy ]
-	  //K_matrix.at<double>(0, 2) = 0; //u_c_;   //      [  0   0   1 ]
-
-	// Estimate feature location in camera frame
-	// change camera intrinsics accordingly
-	  double X_camera =  (x -  637.87114)/W;//(x-cx)/W;
-	  double Y_camera =  (y - 331.27469)/W;//(x -cy)/w
-	  double Z_camera =  531.14774/W;  //f/W
-
-	 gtsam::Point3 camera_point = gtsam::Point3(X_camera,Y_camera,Z_camera);
-
-	  //TODO:// If landmark is behind camera, don't add to isam2 graph/point cloud
-	  
-
-	  //TODO: // Transform landmark coordinates to world frame 
-
-	  //TODO: //Add ISAM2 value for feature/landmark if it doesn't already exist
+	 Eigen::Vector3d camera_point = feature.GetTriangulatedPoint();// feature in Camera frame 
+         
+         double uL = keypoint_left.pt.x; //coordinates.first.row(i)(0);  // from example it is being multiplied by resolution, check why resolution_x    is       image distortion intrinsics
+         double uR = keypoint_right.pt.x; //coordinates.second.row(num)(0); // from example it is being multiplied by resolution check why? 
+         double v  = keypoint_left.pt.y; //coordinates.first.row(num)(1);  // same for both left and right images if the stereo cameras are rectified
+ 
 
 	  //bool bool_new_landmark = !result.exists(Symbol('l', landmark_id));
 	  //if (bool_new_landmark) {
@@ -1378,10 +1380,10 @@ if ( start == false){
 	   
 	  // create stereo camera calibration object with .2m between cameras
 	  // change accordingly the K calue depending n the camera parameters
-	  const Cal3_S2Stereo::shared_ptr K(
-	      new Cal3_S2Stereo(1000, 1000, 0, 320, 240, 0.2));
-
-	    graph->emplace_shared<
+          const Cal3_S2Stereo::shared_ptr K(
+	      new Cal3_S2Stereo(this->fx,this->fy, 0,this->cx, this->cy, this->Tx));
+	      
+	   graph->emplace_shared<
 	      GenericStereoFactor<Pose3, Point3> >(StereoPoint2(uL, uR, v), 
 		pose_landmark_noise, X(this->key("pose")), landmark, K);
 	    index++;
