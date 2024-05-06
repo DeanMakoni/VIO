@@ -264,7 +264,7 @@ Vector3 prior_velocity;
 double prior_pressure; // change this value accordingly  
 bool start; // used to initialise visoextractor_
 int  landmark_id;  // landmark ID represents the index in the FeatureSPtrVectorSptr 
-
+int frame_index_; //indexing frames for initialisation
 // Initialize VIO Variables
 double fx;  
 double fy;                   // Camera calibration intrinsics
@@ -408,6 +408,7 @@ private:
   aru::core::utilities::image::StereoImage image_stereo_prev_;
 
   aru::core::utilities::image::StereoImage image_key_;
+  aru::core::utilities::image::Frames  frames_;
 
   bool prev_image = false;
   uint64_t prev_timestamp;
@@ -871,18 +872,63 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
     // Add node value for current pose with initial estimate being previous pose
     // count is the pose_id
 
-    TODO:// Check why is the example using prev_camera pose instead of the current pose
-    //if (count == 0 || count == 1) {
-    //  prev_camera_pose = Pose3() * Pose3(T_cam_imu_mat);
-   // 
-    // add Stereo factors to graph and values t
-     //, coordinates);
-    
-
+   
+    //  Checking if it is a key frame
       if (dist > min_distance_ || rotation > min_rotation_) {
         prev_timestamp = time_out;
         image_key_ = image_stereo_;
+        
+        
+        // track features of the stereo images
+        // intialise viso_extraactor on first flag
+        viso_extractor_->UpdateFeatures(image_left, image_right);
+        
+        // Get a track of the features
+        std::vector<FeatureTrack> active_tracks_->GetActiveTracks();
+        
+        //  from FeatureTrack iterate through every feature
+        // check for sufficient parallax for current frame and previous frames
+        // start with the latest two frames
+        for (int i =0 ; i< frame_index_; i++) {
+             //pair that will contain corresponding features in frames we are comparing
+             typedef std::pair<FeatureSPtr, FeatureSPtr> FeaturePair;
+             std::vector<FeaturePair> corres;
+             
+             for( const auto& track : active_tracks_){
+                 //check if the two frame index exist in current FeatureTrack
+                 // FeatureTrack is a feature tracked in multiple frames
+                 // start by comparing the latest two frames
+                  auto it1 = std::find(track.frame_track_->begin(), track.frame_track_->end(), frame_index_);
+                  auto it2 = std::find(track.frame_track_->begin(), track.frame_track_->end(), frame_index_-i);
 
+                 if (it1 != track.frame_track_->end() && it2 != track.frame_track_->end()) {
+                 	// if the feature appears in oth frames there is a correspondance
+                       // Get the indexes of num1 and num2 in the frame_track_ vector
+                      int index1 = std::distance(track.frame_track_->begin(), it1);
+                      int index2 = std::distance(track.frame_track_->begin(), it2);
+                      
+                      FeatureSPtr feature1 = (*track.feature_track_)[index1];
+                      FeatureSPtr feature2 = (*track.feature_track_)[index2];
+                      // Store feature1 and feature2 in a std::pair and push it into the vector
+                      corres.push_back(std::make_pair(feature1, feature2));
+                  //std::cout << "Both " << num1 << " and " << num2 << " exist in frame_track_" << std::endl;
+                  
+                }
+             }
+        }
+        
+        // Store the image_key_ in a vector
+        frames.pushback( image_key_);
+        
+        // iterate through a map of frames using iterator to check for tracked feature and 2D to 2D
+        // correspondance between succesive features
+        std::map<aru::core::utilities::image::Image, aru::core::utilities::image::StereoImage>::iterator it;
+        
+        if (frames.size() > 1) {
+             for (it = frames.begin(); it != frames.end(); ++it) {
+           
+               }
+        }
         // Publish key frame transform
         Eigen::Affine3d pose_eigen = pose->GetTransform().cast<double>();
         geometry_msgs::msg::TransformStamped t =
@@ -895,7 +941,7 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
         // Publish key frame image
         auto mStereoCamInfoMsg =
             std::make_shared<sensor_msgs::msg::CameraInfo>();
-
+        frame_index_++;
         // Publish the rectified images
         //auto msg_kf =
       //      cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", image_stereo)

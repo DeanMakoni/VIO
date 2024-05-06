@@ -39,6 +39,7 @@ private:
 };
 
 typedef std::pair<Image,Image> StereoImage;
+std::map<Image, StereoImage> Frames; 
 
 } // namespace image
 } // namespace utilities
