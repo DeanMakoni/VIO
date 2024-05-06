@@ -911,10 +911,35 @@ void ROSVO::callback_function(const sensor_msgs::msg::Image::SharedPtr msg) {
                       FeatureSPtr feature2 = (*track.feature_track_)[index2];
                       // Store feature1 and feature2 in a std::pair and push it into the vector
                       corres.push_back(std::make_pair(feature1, feature2));
-                  //std::cout << "Both " << num1 << " and " << num2 << " exist in frame_track_" << std::endl;
+                     //std::cout << "Both " << num1 << " and " << num2 << " exist in frame_track_" << std::endl;
                   
                 }
              }
+             
+            if (corres.size() > 20){
+            
+              double sumparallax = 0;
+              double average_parallax;
+              for (const auto& pair : featurePairs) {
+                 FeatureSPtr feature1 = pair.first;
+                 FeatureSPtr feature2 = pair.second;
+                 
+                 aru::core::utilities::image::Feature& feature_1 = *feature1;
+                 aru::core::utilities::image::Feature& feature_2 = *feature2;
+                 Eigen::Vector3d camera_point1 = feature_1.GetTriangulatedPoint();
+                 Eigen::Vector3d camera_point2 = feature_2.GetTriangulatedPoint();
+                 
+                 // Extract Eigen::Vector2d from Eigen::Vector3d
+                 Eigen::Vector2d point1_2d = camera_point1.head<2>();
+                 Eigen::Vector2d point2_2d = camera_point2.head<2>();
+                 
+                 double parallax = (point1_2d - point2_2d).norm();
+                 sumparallax = sumparallax + parallax;
+                 
+                }
+            }
+            average_parallax = 1 * sumparallax/ int(corres.size());
+            
         }
         
         // Store the image_key_ in a vector
